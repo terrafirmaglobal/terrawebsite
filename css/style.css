@@ -565,3 +565,8 @@ a:hover {
         .hamburger { display: none; }
     }
 }
+
+
+.hamburger {
+    display: none !important;
+}
