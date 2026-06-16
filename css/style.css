@@ -508,3 +508,18 @@ a:hover {
     object-fit: cover;
     display: block;
 }
+
+
+/* Logo Video Section */
+.logo-video-section {
+    padding: 80px 60px;
+    text-align: center;
+    background: linear-gradient(to bottom, #f8f8f8, #ffffff);
+}
+
+.logo-video-section video {
+    max-width: 100%;
+    max-height: 420px;
+    border-radius: 16px;
+    box-shadow: 0 15px 40px rgba(27, 67, 50, 0.15);
+}
