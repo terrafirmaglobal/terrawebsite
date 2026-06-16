@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Terra Firma Global">
-    <title>Terra Firma Global</title>
+    <meta name="description" content="Anthony Sandoval - Terra Firma Global & VesperStone - Regenerative Real Estate & Impact Investing">
+    <meta name="keywords" content="regenerative real estate, impact investing, family office advisory, capital raising, sustainable development">
+    <title>Anthony Sandoval | Terra Firma Global & VesperStone</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         * {
             margin: 0;
@@ -12,18 +15,643 @@
             box-sizing: border-box;
         }
 
-        html, body {
-            width: 100%;
-            height: 100%;
-            overflow: hidden;
+        html {
+            scroll-behavior: smooth;
         }
 
         body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #1a1a1a;
+        }
+
+        /* Color Palette */
+        :root {
+            --primary-green: #1b4332;
+            --secondary-green: #2d6a4f;
+            --light-green: #40916c;
+            --earth-brown: #8b7355;
+            --warm-gold: #d4af37;
+            --cream: #f5f1e8;
+            --dark-bg: #0f2818;
+        }
+
+        /* Hero Video Background */
+        .hero-section {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-fallback {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
             background: url('assets/bg.png') center/cover no-repeat fixed;
-            background-color: #000;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 40, 24, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero-content p {
+            font-size: 1.4rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.95);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px;
+            margin: 10px;
+            background: var(--warm-gold);
+            color: var(--dark-bg);
+            text-decoration: none;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            border: 2px solid var(--warm-gold);
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--warm-gold);
+        }
+
+        .cta-button-secondary {
+            background: transparent;
+            color: var(--warm-gold);
+            border: 2px solid var(--warm-gold);
+        }
+
+        .cta-button-secondary:hover {
+            background: var(--warm-gold);
+            color: var(--dark-bg);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 40, 24, 0.95);
+            z-index: 100;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: var(--warm-gold);
+            font-size: 1.5rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--warm-gold);
+        }
+
+        /* Section Styling */
+        section {
+            padding: 80px 40px;
+        }
+
+        h2 {
+            font-size: 3rem;
+            font-weight: 300;
+            letter-spacing: 1px;
+            margin-bottom: 50px;
+            text-align: center;
+            color: var(--primary-green);
+        }
+
+        /* About Section */
+        .about-section {
+            background: var(--cream);
+            margin-top: 100px;
+        }
+
+        .about-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-text h3 {
+            font-size: 2rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+        }
+
+        .about-text p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .about-image {
+            width: 100%;
+            height: 400px;
+            background: linear-gradient(135deg, var(--light-green), var(--secondary-green));
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+        }
+
+        /* Cards Grid */
+        .cards-grid {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: linear-gradient(135deg, var(--light-green), var(--secondary-green));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .card-content {
+            padding: 30px;
+        }
+
+        .card h3 {
+            font-size: 1.5rem;
+            color: var(--primary-green);
+            margin-bottom: 15px;
+        }
+
+        .card p {
+            color: #666;
+            line-height: 1.6;
+            font-size: 1rem;
+        }
+
+        .card-tag {
+            display: inline-block;
+            background: var(--light-green);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin-top: 15px;
+        }
+
+        /* Investment Themes Section */
+        .themes-section {
+            background: white;
+        }
+
+        /* Projects Section */
+        .projects-section {
+            background: var(--cream);
+        }
+
+        /* Services Section */
+        .services-section {
+            background: white;
+        }
+
+        .services-list {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .service-item {
+            padding: 30px;
+            border-left: 4px solid var(--warm-gold);
+            background: var(--cream);
+            border-radius: 5px;
+        }
+
+        .service-item h3 {
+            color: var(--primary-green);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .service-item p {
+            color: #666;
+            line-height: 1.6;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            color: white;
+            text-align: center;
+        }
+
+        .contact-section h2 {
+            color: white;
+        }
+
+        .contact-section p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+            margin-bottom: 40px;
+        }
+
+        .contact-item {
+            text-align: center;
+        }
+
+        .contact-item h3 {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-item a {
+            color: var(--warm-gold);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: white;
+            padding: 40px;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-content p {
+                font-size: 1.1rem;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 40px 20px;
+            }
+
+            .about-section {
+                margin-top: 60px;
+            }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">🌍 TERRA FIRMA GLOBAL</div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#themes">Investment Themes</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="home">
+        <div class="hero-fallback"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Building a More Beautiful World Through Strategic Capital</h1>
+            <p>Connecting visionary projects with aligned capital to create lasting impact in regenerative development, hospitality, infrastructure, and sustainability.</p>
+            <a href="#projects" class="cta-button">Explore Opportunities</a>
+            <a href="#contact" class="cta-button cta-button-secondary">Schedule a Conversation</a>
+        </div>
+    </section>
+
+    <!-- About Anthony -->
+    <section class="about-section" id="about">
+        <h2>About Anthony Sandoval</h2>
+        <div class="about-content">
+            <div class="about-text">
+                <h3>Principal & Global Connector</h3>
+                <p>Born in Caracas, Venezuela. British citizen educated at the London School of Economics (Philosophy & Economics). With more than two decades of experience in real estate, finance, and strategic partnerships, Anthony bridges visionary projects with aligned capital.</p>
+                <p><strong>Mission:</strong> To direct capital toward projects that improve communities, preserve natural systems, create financial value, and leave future generations better off.</p>
+                <p>Global citizen. Musician. Father. Passionate advocate for regenerative development and impact investing at scale.</p>
+            </div>
+            <div class="about-image">
+                <i class="fas fa-user-circle"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Themes -->
+    <section class="themes-section" id="themes">
+        <h2>Investment Themes</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-image">🏡</div>
+                <div class="card-content">
+                    <h3>Regenerative Real Estate</h3>
+                    <p>Sustainable communities, CLT developments, and eco-forward housing that create positive environmental and social impact.</p>
+                    <span class="card-tag">Core Focus</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">🏨</div>
+                <div class="card-content">
+                    <h3>Sustainable Hospitality</h3>
+                    <p>Luxury eco-resorts and wellness hotels that blend regenerative practices with exceptional guest experiences.</p>
+                    <span class="card-tag">Growth Area</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">🌳</div>
+                <div class="card-content">
+                    <h3>Mass Timber & CLT</h3>
+                    <p>Cross-laminated timber developments that combine sustainability with modern architecture and community building.</p>
+                    <span class="card-tag">Specialty</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">⚡</div>
+                <div class="card-content">
+                    <h3>Energy Transition</h3>
+                    <p>Renewable energy infrastructure, clean tech, and decentralized energy solutions for sustainable futures.</p>
+                    <span class="card-tag">Growing Focus</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">🖥️</div>
+                <div class="card-content">
+                    <h3>Digital Infrastructure</h3>
+                    <p>Data centers and digital infrastructure positioned for clean energy and technological advancement.</p>
+                    <span class="card-tag">Expansion</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image">💚</div>
+                <div class="card-content">
+                    <h3>Longevity & Wellness</h3>
+                    <p>Communities and developments focused on health, wellness, and extended quality of life for future generations.</p>
+                    <span class="card-tag">Emerging</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="projects-section" id="projects">
+        <h2>Featured Projects</h2>
+        <div class="cards-grid">
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #2d6a4f, #1b4332);">🇵🇹</div>
+                <div class="card-content">
+                    <h3>Arolla Portugal</h3>
+                    <p>Mass timber regenerative community combining sustainable housing with ecological restoration and community integration.</p>
+                    <span class="card-tag">Portugal</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #40916c, #2d6a4f);">🇮🇹</div>
+                <div class="card-content">
+                    <h3>Sardinia Longevity Village</h3>
+                    <p>Wellness-focused community development integrating longevity research with luxury living and Mediterranean heritage.</p>
+                    <span class="card-tag">Italy</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #1b4332, #0f2818);">🇺🇸</div>
+                <div class="card-content">
+                    <h3>Austin Multifamily Development</h3>
+                    <p>Modern, sustainable multifamily housing supporting Austin's growth with eco-friendly urban living solutions.</p>
+                    <span class="card-tag">Texas, USA</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #40916c, #1b4332);">🇲🇽</div>
+                <div class="card-content">
+                    <h3>Tulum Sustainable Hospitality</h3>
+                    <p>Luxury eco-resort opportunities combining world-class hospitality with regenerative practices and cultural immersion.</p>
+                    <span class="card-tag">Mexico</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #2d6a4f, #40916c);">⛳</div>
+                <div class="card-content">
+                    <h3>Regenerative Golf Communities</h3>
+                    <p>Golf course developments reimagined as regenerative ecosystems combining sport, conservation, and community.</p>
+                    <span class="card-tag">Global</span>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-image" style="background: linear-gradient(135deg, #1b4332, #2d6a4f);">🇬🇪</div>
+                <div class="card-content">
+                    <h3>Georgia Infrastructure & Energy</h3>
+                    <p>Strategic infrastructure and renewable energy partnerships positioning Georgia as a regional innovation hub.</p>
+                    <span class="card-tag">Georgia</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services-section" id="services">
+        <h2>Services & Capabilities</h2>
+        <div class="services-list">
+            <div class="service-item">
+                <h3>Capital Formation</h3>
+                <p>Structuring and raising capital for exceptional regenerative and impact-focused projects.</p>
+            </div>
+            <div class="service-item">
+                <h3>Family Office Introductions</h3>
+                <p>Strategic connections with family offices and high-net-worth individuals aligned with your mission.</p>
+            </div>
+            <div class="service-item">
+                <h3>Strategic Advisory</h3>
+                <p>Institutional-grade guidance on positioning, structure, and growth strategy for impact projects.</p>
+            </div>
+            <div class="service-item">
+                <h3>Fundraising Strategy</h3>
+                <p>Development and execution of comprehensive fundraising strategies tailored to your opportunity.</p>
+            </div>
+            <div class="service-item">
+                <h3>Investment Memoranda</h3>
+                <p>Professional preparation of investment materials that inspire confidence and capital commitment.</p>
+            </div>
+            <div class="service-item">
+                <h3>Pitch Deck Development</h3>
+                <p>Compelling visual storytelling that communicates vision, impact, and investment opportunity.</p>
+            </div>
+            <div class="service-item">
+                <h3>Project Evaluation</h3>
+                <p>Expert assessment of regenerative development and infrastructure opportunities for alignment and viability.</p>
+            </div>
+            <div class="service-item">
+                <h3>Developer Advisory</h3>
+                <p>Guidance for developers and entrepreneurs navigating capital markets and investor relationships.</p>
+            </div>
+            <div class="service-item">
+                <h3>LP Relations</h3>
+                <p>Building and nurturing relationships with limited partners and institutional investors for long-term partnerships.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2>Let's Build Something Meaningful Together</h2>
+        <p>Connect with Anthony to explore opportunities, discuss vision, or learn more about Terra Firma Global and VesperStone.</p>
+        <div class="contact-info">
+            <div class="contact-item">
+                <h3>Email</h3>
+                <a href="mailto:anthony@terrafirmaglobal.com">anthony@terrafirmaglobal.com</a>
+            </div>
+            <div class="contact-item">
+                <h3>LinkedIn</h3>
+                <a href="https://linkedin.com" target="_blank">Connect on LinkedIn</a>
+            </div>
+            <div class="contact-item">
+                <h3>Schedule</h3>
+                <a href="#" target="_blank">Book a Conversation</a>
+            </div>
+        </div>
+        <a href="mailto:anthony@terrafirmaglobal.com" class="cta-button" style="background: var(--warm-gold); color: var(--dark-bg);">Get in Touch</a>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 Terra Firma Global & VesperStone. All rights reserved.</p>
+        <p style="font-size: 0.9rem; margin-top: 20px; color: rgba(255, 255, 255, 0.7);">This website is for informational purposes. Not regulated investment advice.</p>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add scroll animation for cards
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            card.style.transition = 'all 0.6s ease';
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
