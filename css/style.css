@@ -570,3 +570,9 @@ a:hover {
 .hamburger {
     display: none !important;
 }
+
+.hero {
+    margin-top: 0 !important;
+    height: 100vh;
+}
+
