@@ -475,3 +475,28 @@ a:hover {
     color: rgba(255, 255, 255, 0.7);
     font-size: 0.9rem;
 }
+
+
+
+.logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo-img {
+  height: 48px;           /* Adjust size as needed */
+  width: auto;
+  max-height: 60px;
+  transition: all 0.3s ease;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+}
+
+/* Make sure it looks good on mobile */
+@media (max-width: 768px) {
+  .logo-img {
+    height: 40px;
+  }
+}
