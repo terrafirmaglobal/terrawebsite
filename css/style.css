@@ -484,9 +484,9 @@ a:hover {
 }
 
 .logo-img {
-  height: 68px;           /* Adjust size as needed */
+  height: 85px;           /* Adjust size as needed */
   width: auto;
-  max-height: 60px;
+  max-height: 85px;
   transition: all 0.3s ease;
 }
 
