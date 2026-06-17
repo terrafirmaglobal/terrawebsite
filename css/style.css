@@ -27,6 +27,8 @@ body {
     line-height: 1.6;
     color: var(--text-dark);
     background-color: var(--bg-white);
+    margin: 0;
+    padding: 0;
 }
 
 /* Typography */
@@ -155,6 +157,7 @@ a:hover {
     justify-content: center;
     margin-top: 0;             /* Important: No top margin */
     position: relative;
+    overflow: hidden;
 }
 
 .hero-content {
@@ -597,8 +600,4 @@ a:hover {
     display: none !important;
 }
 
-.hero {
-    margin-top: 0 !important;
-    height: 100vh;
-}
 
