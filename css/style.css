@@ -600,4 +600,22 @@ a:hover {
     display: none !important;
 }
 
+/* Investment Themes Card Images */
+.card-image {
+    width: 100%;
+    height: 260px;              /* Increase this if needed */
+    object-fit: cover;          /* This is the key - fills the area nicely */
+    display: block;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
 
+.card {
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
