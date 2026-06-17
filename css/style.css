@@ -128,6 +128,8 @@ a:hover {
 }
 
 /* Hero Section */
+ 
+/*
 .hero {
     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     color: white;
@@ -137,7 +139,31 @@ a:hover {
     display: flex;
     align-items: center;
     justify-content: center;
+}    
+      
+*/
+
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    color: white;
+    padding: 0 2rem;           /* Reduced side padding */
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 0;             /* Important: No top margin */
+    position: relative;
 }
+
+.hero-content {
+    text-align: center;
+    max-width: 900px;
+    padding: 0 20px;
+    z-index: 2;
+}
+
 
 .hero-content h2 {
     color: white;
