@@ -49,10 +49,22 @@
         }
 
         nav .logo {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: var(--primary-green);
-            letter-spacing: 0.5px;
+            height: 50px;
+            width: auto;
+            display: flex;
+            align-items: center;
+            transition: all 0.3s ease;
+        }
+
+        nav .logo:hover {
+            opacity: 0.8;
+            transform: scale(1.05);
+        }
+
+        nav .logo img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
         }
 
         nav a.back-link {
@@ -126,13 +138,15 @@
         footer {
             background: var(--dark-bg);
             color: white;
-            padding: 60px;
+            padding: 40px 60px;
             text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
 
         footer p {
             color: rgba(255, 255, 255, 0.7);
-            margin-bottom: 10px;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
         }
 
         .footer-legal {
@@ -140,7 +154,7 @@
             justify-content: center;
             gap: 30px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 15px;
         }
 
         .footer-legal a {
@@ -177,7 +191,9 @@
 <body>
     <!-- Navigation -->
     <nav>
-        <div class="logo">🌍 TERRA FIRMA GLOBAL</div>
+        <a href="index.html" class="logo">
+            <img src="assets/logo.png" alt="Terra Firma Global Logo">
+        </a>
         <a href="index.html" class="back-link">← Back to Home</a>
     </nav>
 
@@ -273,7 +289,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Terra Firma Global. All rights reserved.</p>
+        <p>&copy; 2026 Terra Firma Global. All rights reserved. | Terra Firma Global Advisory Ltd</p>
         <div class="footer-legal">
             <a href="terms.html">Terms of Service</a>
             <a href="privacy.html">Privacy Policy</a>
