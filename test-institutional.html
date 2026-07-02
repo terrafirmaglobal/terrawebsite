@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Terra Firma Global - Institutional Design">
+    <title>Terra Firma Global - Institutional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            width: 100%;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        /* Header & Navigation */
+        header {
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #2c3e50;
+            text-decoration: none;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #555;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #3498db;
+        }
+
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: #2c3e50;
+            margin-bottom: 1rem;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 0.75rem 2rem;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+
+        .btn-primary {
+            background: #3498db;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #2980b9;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: #3498db;
+            border: 2px solid #3498db;
+        }
+
+        .btn-secondary:hover {
+            background: #3498db;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        /* Features Section */
+        .features {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .features h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #2c3e50;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            padding: 2rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+            border-left: 4px solid #3498db;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+        }
+
+        .feature-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: #2c3e50;
+        }
+
+        .feature-card p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        /* About Section */
+        .about {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 3rem 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+
+        .about h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            color: #2c3e50;
+        }
+
+        .about p {
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.8;
+        }
+
+        /* Contact Section */
+        .contact {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 3rem 2rem;
+            background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+            border-radius: 10px;
+            color: white;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .contact p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        footer p {
+            margin: 0.5rem 0;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            nav {
+                padding: 1rem;
+            }
+
+            .features {
+                padding: 1.5rem;
+            }
+
+            .about {
+                padding: 1.5rem;
+            }
+
+            .contact {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">Terra Firma Global</a>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#features">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Terra Firma Global</h1>
+        <p>Building sustainable solutions for a better tomorrow. We deliver institutional-grade services with integrity and excellence.</p>
+        <div class="cta-buttons">
+            <button class="btn btn-primary">Get Started</button>
+            <button class="btn btn-secondary">Learn More</button>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <h2>Our Services</h2>
+        <div class="feature-grid">
+            <div class="feature-card">
+                <h3>🌍 Global Reach</h3>
+                <p>Operating across multiple continents with local expertise and international standards.</p>
+            </div>
+            <div class="feature-card">
+                <h3>💼 Professional Standards</h3>
+                <p>Institutional-grade processes and compliance with industry best practices.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔒 Security First</h3>
+                <p>Enterprise-level security measures to protect your data and assets.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📈 Scalable Solutions</h3>
+                <p>Growing with your business needs, from startups to enterprises.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🤝 Expert Support</h3>
+                <p>Dedicated team of professionals ready to assist you 24/7.</p>
+            </div>
+            <div class="feature-card">
+                <h3>♻️ Sustainability</h3>
+                <p>Committed to environmental responsibility and sustainable practices.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <h2>About Terra Firma Global</h2>
+        <p>Terra Firma Global is committed to delivering exceptional value through innovative solutions and unwavering integrity. With years of experience serving institutional clients, we understand the complexities of modern business challenges.</p>
+        <p>Our mission is to provide reliable, scalable, and sustainable services that enable our clients to achieve their goals while maintaining the highest standards of professionalism and ethics.</p>
+        <p>We believe in the power of collaboration, continuous improvement, and staying true to our core values in everything we do.</p>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <h2>Ready to Work With Us?</h2>
+        <p>Get in touch today to learn how Terra Firma Global can help your organization succeed.</p>
+        <button class="btn btn-primary">Contact Us</button>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Terra Firma Global. All rights reserved.</p>
+        <p><a href="#" style="color: #ecf0f1; text-decoration: none;">Privacy Policy</a> | <a href="#" style="color: #ecf0f1; text-decoration: none;">Terms of Service</a></p>
+    </footer>
+</body>
+</html>
