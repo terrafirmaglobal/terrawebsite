@@ -339,6 +339,39 @@
             .network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
             .network-card { min-height: 120px; padding: 20px; }
             .network-card img { max-height: 56px; }
+            .two-col-mobile {
+                display: grid !important;
+                grid-template-columns: 1fr !important;
+                gap: 32px !important;
+                align-items: start !important;
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 20px !important;
+                padding-right: 20px !important;
+                margin: 0 auto !important;
+                overflow-x: hidden !important;
+            }
+            .two-col-mobile > div {
+                width: 100% !important;
+                min-width: 0 !important;
+                max-width: 100% !important;
+            }
+            .two-col-mobile h2 {
+                font-size: 2.2rem !important;
+                margin-bottom: 18px !important;
+                text-align: left !important;
+                word-break: break-word;
+            }
+            .two-col-mobile h3 {
+                font-size: 1.2rem !important;
+                line-height: 1.35 !important;
+                word-break: break-word;
+            }
+            .two-col-mobile p {
+                font-size: 1rem !important;
+                line-height: 1.75 !important;
+                word-break: break-word;
+            }
         }
     </style>
 </head>
@@ -376,7 +409,7 @@
     </section>
 
     <!-- Unique Opportunities & The Business Section -->
-    <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 60px; max-width: 1400px; margin: 0 auto;">
+    <section class="two-col-mobile" style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 60px; max-width: 1400px; margin: 0 auto;">
         <!-- Left Column: Unique Opportunities -->
         <div>
             <h2 style="font-size: 2.8rem; margin-bottom: 40px; color: var(--primary-green);">Unique Opportunities</h2>
