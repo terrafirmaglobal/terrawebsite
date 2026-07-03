@@ -195,6 +195,49 @@
             color: rgba(255,255,255,0.9);
         }
 
+        #network {
+            background: linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
+            border-top: 1px solid rgba(27,67,50,0.08);
+            border-bottom: 1px solid rgba(27,67,50,0.08);
+        }
+
+        .network-subtitle {
+            max-width: 760px;
+        }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+        }
+
+        .network-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            padding: 24px;
+            background: rgba(255,255,255,0.95);
+            border: 1px solid rgba(45,106,79,0.12);
+            box-shadow: 0 8px 24px rgba(27,67,50,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+
+        .network-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212,175,55,0.45);
+            box-shadow: 0 16px 32px rgba(27,67,50,0.12);
+        }
+
+        .network-card img {
+            max-width: 100%;
+            max-height: 72px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: saturate(0.98);
+        }
+
         .contact-section {
             background: #1a472e;
             color: white;
@@ -289,6 +332,9 @@
             .hero-content h1 { font-size: 2.8rem; }
             section { padding: 80px 20px; }
             footer { padding: 30px 20px; }
+            .network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .network-card { min-height: 120px; padding: 20px; }
+            .network-card img { max-height: 56px; }
         }
     </style>
 </head>
@@ -483,6 +529,62 @@
             <div class="service-card"><h3>Family Office Introductions</h3><p>Connections with aligned investors.</p></div>
             <div class="service-card"><h3>Strategic Advisory</h3><p>Positioning and market growth guidance.</p></div>
             <div class="service-card"><h3>Pitch Deck Development</h3><p>Compelling investment materials.</p></div>
+        </div>
+    </section>
+
+    <!-- Our Network -->
+    <section id="network">
+        <h2>Our Network</h2>
+        <p class="section-subtitle network-subtitle">A curated partner network spanning hospitality, finance, data, wellness, and regenerative development across global markets.</p>
+        <div class="network-grid">
+            <a class="network-card" href="https://islandambassadori.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Island Ambassadori">
+                <img src="assets/partnerlogos/logoambasisl.png" alt="Island Ambassadori logo">
+            </a>
+            <a class="network-card" href="https://mardi.ge/" target="_blank" rel="noopener noreferrer" aria-label="Visit Mardi">
+                <img src="assets/partnerlogos/mardi%20h.png" alt="Mardi logo">
+            </a>
+            <a class="network-card" href="https://lareservatulum.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit La Reserva Tulum">
+                <img src="assets/partnerlogos/reservatulum.jpg" alt="La Reserva Tulum logo">
+            </a>
+            <a class="network-card" href="https://go.tradewithsequence.com/AS" target="_blank" rel="noopener noreferrer" aria-label="Visit Sequence">
+                <img src="assets/partnerlogos/sequence_edited.jpg" alt="Sequence logo">
+            </a>
+            <a class="network-card" href="https://sanarahotels.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sanarà">
+                <img src="assets/partnerlogos/Sanara_type_BL2.png" alt="Sanarà logo">
+            </a>
+            <a class="network-card" href="https://lightspace.earth/" target="_blank" rel="noopener noreferrer" aria-label="Visit Lightspace">
+                <img src="assets/partnerlogos/Lightspace-logo.jpeg" alt="Lightspace logo">
+            </a>
+            <a class="network-card" href="https://www.emeraldpinecapital.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Emerald Pine Capital">
+                <img src="assets/partnerlogos/Emerald%20Pine%20Logo.jpeg" alt="Emerald Pine Capital logo">
+            </a>
+            <a class="network-card" href="https://rizeetf.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Rize ETF">
+                <img src="assets/partnerlogos/rize-etf-black.png" alt="Rize ETF logo">
+            </a>
+            <a class="network-card" href="https://www.copperman.com/en" target="_blank" rel="noopener noreferrer" aria-label="Visit Copperman">
+                <img src="assets/partnerlogos/copperman.jpg" alt="Copperman logo">
+            </a>
+            <a class="network-card" href="https://dataprana.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dataprana">
+                <img src="assets/partnerlogos/Dataprana%20logo.jpeg" alt="Dataprana logo">
+            </a>
+            <a class="network-card" href="https://inmoandinvestment.com/en/team" target="_blank" rel="noopener noreferrer" aria-label="Visit In&amp;I">
+                <img src="assets/partnerlogos/IandI%20Eladia%20logo-web.png" alt="In&amp;I logo">
+            </a>
+            <a class="network-card" href="https://vestigecollection.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Vestige Collection">
+                <img src="assets/partnerlogos/VESTIGE%20COLLECTION%20%281%29.jpeg" alt="Vestige Collection logo">
+            </a>
+            <a class="network-card" href="https://zamaniislands.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Zamani Islands">
+                <img src="assets/partnerlogos/logo%20zamani%20islands%20%281%29.jpeg" alt="Zamani Islands logo">
+            </a>
+            <a class="network-card" href="https://park49.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Park 49">
+                <img src="assets/partnerlogos/P49-Lite-Red.001.png" alt="Park 49 logo">
+            </a>
+            <a class="network-card" href="https://www.vsv-asg.ch/en/" target="_blank" rel="noopener noreferrer" aria-label="Visit APW">
+                <img src="assets/partnerlogos/logoapw.png" alt="APW logo">
+            </a>
+            <a class="network-card" href="https://innovationsoftheworld.com/logos-capital/" target="_blank" rel="noopener noreferrer" aria-label="Visit Logos Capital">
+                <img src="assets/partnerlogos/logos.png" alt="Logos Capital logo">
+            </a>
         </div>
     </section>
 
