@@ -88,6 +88,12 @@ a:hover {
     margin: 0;
 }
 
+.navbar-brand .logo-img {
+    height: 72px;
+    width: auto;
+    display: block;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
