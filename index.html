@@ -7,15 +7,25 @@
     <meta name="keywords" content="regenerative real estate, impact investing, family office advisory, sustainable development">
     <title>Terra Firma Global | Regenerative Capital</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Terra Firma Global connects visionary capital with regenerative real estate, sustainable hospitality, mass timber, and climate-aligned projects worldwide.">
+    <meta name="keywords" content="regenerative real estate, impact investing, sustainable development, CLT, family office, green real estate, Terra Firma Global">
+    <!-- Open Graph / Social Sharing -->
+    <meta property="og:title" content="Terra Firma Global | Regenerative Capital">
+    <meta property="og:description" content="Strategic capital for regenerative real estate, sustainable hospitality, and transformative impact projects.">
+    <meta property="og:image" content="https://terrafirmaglobal.com/assets/logo.png">
+    <meta property="og:url" content="https://terrafirmaglobal.com">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terra Firma Global | Regenerative Capital">
+    <meta name="twitter:description" content="Connecting capital with regenerative real estate and impact projects.">
+    <meta name="twitter:image" content="https://terrafirmaglobal.com/assets/logo.png">
+    <!-- Favicon -->
+    <link rel="icon" href="assets/Terra%20Firma%20Favicon%20icon.ico" type="image/x-icon">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        html {
-            scroll-behavior: smooth;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
             color: #1a1a1a;
@@ -31,8 +41,7 @@
         }
         nav {
             position: fixed;
-            top: 0;
-            width: 100%;
+            top: 0; width: 100%;
             background: rgba(255,255,255,0.98);
             z-index: 1000;
             padding: 20px 60px;
@@ -47,9 +56,7 @@
             width: auto;
             transition: all 0.3s ease;
         }
-        .logo-img:hover {
-            transform: scale(1.05);
-        }
+        .logo-img:hover { transform: scale(1.05); }
         nav ul {
             display: flex;
             list-style: none;
@@ -61,9 +68,7 @@
             font-weight: 500;
             transition: color 0.3s;
         }
-        nav a:hover {
-            color: var(--primary-green);
-        }
+        nav a:hover { color: var(--primary-green); }
         .hero {
             height: 100vh;
             position: relative;
@@ -74,40 +79,29 @@
             margin-top: 0px;
         }
         .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
             object-fit: cover;
             z-index: 0;
         }
         .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
             background: radial-gradient(circle, rgba(15,40,24,0.4) 0%, rgba(15,40,24,0.7) 100%);
             z-index: 1;
         }
         .hero-content {
-            position: relative;
-            z-index: 2;
-            text-align: center;
-            color: white;
-            max-width: 900px;
-            padding: 60px;
+            position: relative; z-index: 2;
+            text-align: center; color: white;
+            max-width: 900px; padding: 60px;
         }
         .hero-content h1 {
-            font-size: 4.5rem;
-            font-weight: 300;
+            font-size: 4.5rem; font-weight: 300;
             margin-bottom: 30px;
         }
         .cta-button {
             display: inline-block;
-            padding: 16px 40px;
-            margin: 10px;
+            padding: 16px 40px; margin: 10px;
             background: var(--warm-gold);
             color: var(--primary-green);
             text-decoration: none;
@@ -120,23 +114,9 @@
             background: transparent;
             color: var(--warm-gold);
         }
-        section {
-            padding: 100px 60px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        h2 {
-            font-size: 3rem;
-            font-weight: 300;
-            color: var(--primary-green);
-            margin-bottom: 20px;
-        }
-        .section-subtitle {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 60px;
-            max-width: 600px;
-        }
+        section { padding: 100px 60px; max-width: 1400px; margin: 0 auto; }
+        h2 { font-size: 3rem; font-weight: 300; color: var(--primary-green); margin-bottom: 20px; }
+        .section-subtitle { font-size: 1.2rem; color: #666; margin-bottom: 60px; max-width: 600px; }
         .cards-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -149,9 +129,7 @@
             box-shadow: 0 4px 20px rgba(0,0,0,0.08);
             transition: all 0.3s;
         }
-        .card:hover {
-            transform: translateY(-8px);
-        }
+        .card:hover { transform: translateY(-8px); }
         .card-image {
             height: 200px;
             display: flex;
@@ -160,9 +138,7 @@
             color: white;
             font-size: 3rem;
         }
-        .card-content {
-            padding: 35px;
-        }
+        .card-content { padding: 35px; }
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -207,6 +183,7 @@
             box-shadow: 0 8px 24px rgba(27,67,50,0.08);
             transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
             text-decoration: none;
+            cursor: pointer;
         }
         .network-card:hover {
             transform: translateY(-6px);
@@ -300,44 +277,38 @@
         .footer-legal a:hover {
             opacity: 0.8;
         }
-        .two-column-section {
+        .two-col {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 80px;
             align-items: center;
-            padding: 100px 60px;
-            max-width: 1400px;
-            margin: 0 auto;
         }
         @media (max-width: 768px) {
-            .hero-content h1 {
-                font-size: 2.8rem;
-            }
-            section {
-                padding: 80px 20px;
-            }
-            footer {
-                padding: 30px 20px;
-            }
-            .network-grid {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-            .network-card {
-                min-height: 120px;
-                padding: 20px;
-            }
-            .network-card img {
-                max-height: 56px;
-            }
-            .two-column-section {
-                grid-template-columns: 1fr;
-                gap: 40px;
-                padding: 80px 20px;
-            }
+            .hero-content h1 { font-size: 2.8rem; }
+            section { padding: 80px 20px; }
+            footer { padding: 30px 20px; }
+            .network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+            .network-card { min-height: 120px; padding: 20px; }
+            .network-card img { max-height: 56px; }
+            .two-col { grid-template-columns: 1fr; gap: 40px; }
+            nav { padding: 20px 20px; }
+            nav ul { gap: 30px; font-size: 0.9rem; }
         }
     </style>
 </head>
 <body>
+    <!-- Navigation -->
+    <nav>
+        <img src="assets/TFG%20Icon%20PNG%2000.png" alt="Terra Firma Global" class="logo-img">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#themes">Investment Themes</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#network">Network</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero" id="home">
         <video autoplay muted loop playsinline class="hero-video">
@@ -348,12 +319,12 @@
         <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>Building a More Beautiful World</h1>
-            <p>Strategic capital connecting visionary projects to regenerative development, sustainable hospitality, and lasting impact.</p>
+            <p style="font-size: 1.3rem; margin-bottom: 40px; font-weight: 300;">Strategic capital connecting visionary projects to regenerative development, sustainable hospitality, and lasting impact.</p>
         </div>
     </section>
 
     <!-- Logo Video Section -->
-    <section style="padding: 60px; text-align: center; background: #2d6a4f;">
+    <section style="padding: 60px 60px; text-align: center; background: #2d6a4f;">
         <video autoplay muted loop playsinline style="max-width: 100%; max-height: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
             <source src="assets/tflogovideo2.mp4" type="video/mp4">
             Your browser does not support the video tag.
@@ -365,14 +336,12 @@
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 40, 24, 0.55); z-index: 1;"></div>
         <div style="position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; color: white;">
             <h2 style="color: white; font-weight: 300;">International Regenerative Real Estate Fundraising & Financial Consulting</h2>
-            <p style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.95); margin-top: 30px;">
-                Transforming the landscape of impact capital by connecting visionary founders and entrepreneurs with institutional capital that aligns profit with purpose.
-            </p>
+            <p style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.95); margin-top: 30px;">Transforming the landscape of impact capital by connecting visionary founders and entrepreneurs with institutional capital that aligns profit with purpose.</p>
         </div>
     </section>
 
-    <!-- Unique Opportunities & The Business -->
-    <section class="two-column-section">
+    <!-- Opportunities & Business Section -->
+    <section class="two-col" style="padding: 100px 60px; max-width: 1400px; margin: 0 auto;">
         <div>
             <h2 style="font-size: 2.8rem; color: var(--primary-green);">Unique Opportunities</h2>
             <div style="margin-bottom: 40px; margin-top: 40px;">
@@ -389,7 +358,7 @@
             </div>
             <div>
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Impact & Returns</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental and social returns.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental and social returns alongside competitive financial performance.</p>
             </div>
         </div>
         <div>
@@ -413,8 +382,8 @@
         </div>
     </section>
 
-    <!-- About -->
-    <section class="two-column-section">
+    <!-- About Anthony Section -->
+    <section class="two-col" style="padding: 100px 60px; max-width: 1400px; margin: 0 auto; align-items: center;">
         <div>
             <h2>About Anthony Sandoval</h2>
             <p style="margin-top: 20px;"><strong>Principal & Global Connector</strong> bridging visionary projects with aligned capital for transformative impact.</p>
@@ -426,51 +395,51 @@
         </div>
     </section>
 
-    <!-- Investment Themes -->
+    <!-- Investment Themes Section -->
     <section id="themes">
         <h2>Investment Themes & Examples</h2>
         <p class="section-subtitle">Strategic focus areas where capital creates environmental, social, and financial returns.</p>
         <div class="cards-grid">
             <div class="card">
                 <a href="https://www.forestcity.uk/" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="card-image" style="background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));">Regenerative Real Estate</div>
+                    <div class="card-image" style="background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));">🌲 Regenerative Real Estate</div>
                     <div class="card-content"><h3>Forest City & Regenerative Projects</h3></div>
                 </a>
             </div>
             <div class="card">
                 <a href="https://vestigecollection.com/" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="card-image" style="background: linear-gradient(135deg, var(--secondary-green), var(--light-green));">Sustainable Hospitality</div>
+                    <div class="card-image" style="background: linear-gradient(135deg, var(--secondary-green), var(--light-green));">🏨 Sustainable Hospitality</div>
                     <div class="card-content"><h3>Vestige Collection & Luxury Wellness</h3></div>
                 </a>
             </div>
             <div class="card">
                 <a href="https://www.youtube.com/watch?v=e-HvwbUhbss" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="card-image" style="background: linear-gradient(135deg, var(--light-green), var(--primary-green));">Media & Education</div>
+                    <div class="card-image" style="background: linear-gradient(135deg, var(--light-green), var(--primary-green));">📺 Media & Education</div>
                     <div class="card-content"><h3>Impact Media & Storytelling</h3></div>
                 </a>
             </div>
             <div class="card">
                 <a href="https://dynavertholdings.com/" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="card-image" style="background: linear-gradient(135deg, var(--primary-green), var(--warm-gold));">Energy Transition</div>
+                    <div class="card-image" style="background: linear-gradient(135deg, var(--primary-green), var(--warm-gold));">⚡ Energy Transition</div>
                     <div class="card-content"><h3>Energy & Climate Tech</h3></div>
                 </a>
             </div>
             <div class="card">
                 <a href="https://dataprana.io/" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="card-image" style="background: linear-gradient(135deg, var(--secondary-green), var(--warm-gold));">Digital Infrastructure</div>
+                    <div class="card-image" style="background: linear-gradient(135deg, var(--secondary-green), var(--warm-gold));">💻 Digital Infrastructure</div>
                     <div class="card-content"><h3>Data & Digital Solutions</h3></div>
                 </a>
             </div>
             <div class="card">
                 <a href="https://www.sanaracollective.com/" target="_blank" style="text-decoration: none; color: inherit;">
-                    <div class="card-image" style="background: linear-gradient(135deg, var(--light-green), var(--warm-gold));">Longevity & Wellness</div>
+                    <div class="card-image" style="background: linear-gradient(135deg, var(--light-green), var(--warm-gold));">💚 Longevity & Wellness</div>
                     <div class="card-content"><h3>Health & Wellbeing</h3></div>
                 </a>
             </div>
         </div>
     </section>
 
-    <!-- Services -->
+    <!-- Services Section -->
     <section id="services">
         <h2>Services & Capabilities</h2>
         <p class="section-subtitle">Institutional-grade advisory and capital formation.</p>
@@ -494,7 +463,7 @@
         </div>
     </section>
 
-    <!-- Network -->
+    <!-- Network Section -->
     <section id="network">
         <h2>Our Network</h2>
         <p class="section-subtitle network-subtitle">A curated partner network spanning hospitality, finance, data, wellness, and regenerative development.</p>
@@ -550,8 +519,8 @@
         </div>
     </section>
 
-    <!-- Contact -->
-    <section class="contact-section" id="contact">
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
         <h2>Let's Create Something Meaningful</h2>
         <a href="https://www.linkedin.com/company/terra-firma-advisory-group/" target="_blank">
             <h5>Terra Firma Global Advisory Ltd</h5>
@@ -574,5 +543,14 @@
             <a href="disclaimers.html">Disclaimers</a>
         </div>
     </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
 </body>
 </html>
