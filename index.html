@@ -166,56 +166,9 @@
             justify-content: center;
             color: white;
             font-size: 3rem;
-            object-fit: cover;
-            width: 100%;
         }
 
         .card-content { padding: 35px; }
-
-        /* Opportunities Section */
-        .opportunities-section {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 60px;
-            align-items: center;
-        }
-
-        .opportunities-card {
-            background: white;
-            border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
-            transition: all 0.3s ease;
-        }
-
-        .opportunities-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
-        }
-
-        .opportunities-image {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .opportunities-content {
-            padding: 45px;
-        }
-
-        .opportunities-content h3 {
-            font-size: 1.8rem;
-            color: var(--primary-green);
-            margin-bottom: 20px;
-            font-weight: 500;
-        }
-
-        .opportunities-content p {
-            font-size: 1rem;
-            color: #555;
-            line-height: 1.8;
-        }
 
         .services-grid {
             display: grid;
@@ -228,6 +181,18 @@
             background: linear-gradient(135deg, var(--cream), white);
             border-left: 4px solid var(--warm-gold);
             border-radius: 0;
+        }
+
+        #services {
+            background-color: var(--secondary-green);
+        }
+
+        #services h2 {
+            color: white;
+        }
+
+        #services .section-subtitle {
+            color: rgba(255,255,255,0.9);
         }
 
         .contact-section {
@@ -324,10 +289,6 @@
             .hero-content h1 { font-size: 2.8rem; }
             section { padding: 80px 20px; }
             footer { padding: 30px 20px; }
-            .opportunities-section {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
         }
     </style>
 </head>
@@ -396,40 +357,65 @@
     </video>
 </section>
 
-<!-- Terra Firma Global Vision Section with Background Image -->
-<section style="position: relative; padding: 120px 60px; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-image: url('assets/natureriverwebsitebannerTF.webp'); background-size: cover; background-position: center;">
-    <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 40, 24, 0.55); z-index: 1;"></div>
-    <div style="position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; color: white;">
-        <h2 style="font-size: 3.2rem; margin-bottom: 30px; color: white; font-weight: 300;">International Regenerative Real Estate Fundraising & Financial Consulting</h2>
-        <p style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.95);">Transforming the landscape of impact capital by connecting visionary founders and entrepreneurs with institutional capital that aligns profit with purpose—creating regenerative communities, sustainable enterprises, and lasting environmental and social returns.</p>
-    </div>
-</section>
-
-    <!-- Unique Opportunities & The Business Section -->
-    <section style="padding: 100px 60px; max-width: 1400px; margin: 0 auto;">
-        <div class="opportunities-section">
-            <!-- Unique Opportunities Card -->
-            <div class="opportunities-card">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Unique Opportunities" class="opportunities-image">
-                <div class="opportunities-content">
-                    <h3>Unique Opportunities</h3>
-                    <p>Our curated list of real estate & other investments offer lucrative possibilities. Vetted quality & experienced teams</p>
-                </div>
-            </div>
-
-            <!-- The Business Card -->
-            <div class="opportunities-card">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="The Business" class="opportunities-image">
-                <div class="opportunities-content">
-                    <h3>The Business</h3>
-                    <p>Terra Firma - a consulting venture spearheaded by Anthony Sandoval.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
+    
     <!-- About -->
 <!-- About -->
+
+<!-- Unique Opportunities & The Business Section -->
+<section style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 60px; max-width: 1400px; margin: 0 auto;">
+    
+    <!-- Left Column: Unique Opportunities -->
+    <div>
+        <h2 style="font-size: 2.8rem; margin-bottom: 40px; color: var(--primary-green);">Unique Opportunities</h2>
+        
+        <div style="margin-bottom: 40px;">
+            <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Capital Raising & Investment</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Access to institutional capital pools, family offices, and impact-aligned investors ready to deploy $500M+ in regenerative projects globally.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Direct Access to Deal Flow</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Exclusive pipeline of vetted regenerative real estate, sustainable hospitality, mass timber, and climate-tech opportunities across Europe, Americas, and emerging markets.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Strategic Partnerships</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Network with leading developers, architects, and sustainability consultants to accelerate project development and ensure best-in-class execution.</p>
+        </div>
+
+        <div>
+            <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Impact & Returns</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental & social returns alongside competitive financial performance.</p>
+        </div>
+    </div>
+
+    <!-- Right Column: The Business -->
+    <div>
+        <h2 style="font-size: 2.8rem; margin-bottom: 40px; color: var(--primary-green);">The Business</h2>
+        
+        <div style="margin-bottom: 40px;">
+            <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">What We Do</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">We bridge the gap between visionary founders and institutional capital. Terra Firma Global identifies, develops, and funds transformative projects that generate profit alongside purpose.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Thesis</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Capital is flowing toward regenerative development. Institutional LPs and family offices are seeking projects that restore ecosystems, strengthen communities, and deliver strong risk-adjusted returns. The market opportunity is massive.</p>
+        </div>
+
+        <div style="margin-bottom: 40px;">
+            <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Competitive Edge</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Deep expertise in international real estate, LSE education, 20+ years of capital markets relationships, and a proven network of institutional partners across Europe, North America, and beyond.</p>
+        </div>
+
+        <div>
+            <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">The Outcome</h3>
+            <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Accelerated project funding, de-risked capital deployment, and a portfolio of transformative investments creating genuine environmental and social impact at scale.</p>
+        </div>
+    </div>
+
+</section>
+
 <section class="about-section" id="about">
     <h2>About Anthony Sandoval</h2>
     <p class="section-subtitle">Principal & Global Connector bridging visionary projects with aligned capital for transformative impact.</p>
@@ -456,11 +442,11 @@
         <p class="section-subtitle">Strategic focus areas where capital creates environmental, social, and financial returns.</p>
         <div class="cards-grid">
             <div class="card"><a href="https://www.forestcity.uk/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/regen.jpg" alt="Regenerative Real Estate" class="card-image"><div class="card-content"><h3>Regenerative Real Estate</h3><p>Mass timber communities and nature-positive developments.</p></div></a></div>
-            <div class="card"><a href="https://vestigecollection.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/hospitality.jpg" alt="Sustainable Hospitality" class="card-image"><div class="card-content"><h3>Sustainable Hospitality</h3><p>Luxury wellness resorts and eco-lodges.</p></div></a></div>
-            <div class="card"><a href="https://www.youtube.com/watch?v=e-HvwbUhbss&t=1s" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/media.jpg" alt="Media" class="card-image"><div class="card-content"><h3>Media & Entertainment</h3><p>Impact-driven documentary and storytelling.</p></div></a></div>
+            <div class="card"><a href="https://vestigecollection.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/hospitality.jpg" alt="Sustainable Hospitality" class="card-image"><div class="card-content"><h3>Sustainable Hospitality</h3><p>Luxury eco-resorts and wellness destinations.</p></div></a></div>
+            <div class="card"><a href="https://www.youtube.com/watch?v=e-HvwbUhbss&t=1s" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/media.jpg" alt="Media" class="card-image"><div class="card-content"><h3>Media & Communications</h3><p>Impact storytelling and regenerative narratives.</p></div></a></div>
             <div class="card"><a href="https://dynavertholdings.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/energy.jpg" alt="Energy Transition" class="card-image"><div class="card-content"><h3>Energy Transition</h3><p>Renewable infrastructure and climate solutions.</p></div></a></div>
-            <div class="card"><a href="https://dataprana.io/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/data.jpg" alt="Digital Infrastructure" class="card-image"><div class="card-content"><h3>Digital Infrastructure</h3><p>Data centers and emerging technologies.</p></div></a></div>
-            <div class="card"><a href="https://www.sanaracollective.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/wellness.jpg" alt="Longevity & Wellness" class="card-image"><div class="card-content"><h3>Longevity & Wellness</h3><p>Health innovation and regenerative medicine.</p></div></a></div>
+            <div class="card"><a href="https://dataprana.io/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/data.jpg" alt="Digital Infrastructure" class="card-image"><div class="card-content"><h3>Digital Infrastructure</h3><p>Sustainable tech and carbon-negative solutions.</p></div></a></div>
+            <div class="card"><a href="https://www.sanaracollective.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/wellness.jpg" alt="Longevity & Wellness" class="card-image"><div class="card-content"><h3>Longevity & Wellness</h3><p>Health, nutrition, and regenerative living.</p></div></a></div>
         </div>
     </section>
 
@@ -597,8 +583,6 @@ The Registrar of Companies for England and Wales.
             navMenu.classList.remove('active');
         });
     });
-</script>
-
-    
+    </script>
 </body>
 </html>
