@@ -63,7 +63,9 @@
                 <form class="contact-form" id="contactForm"
                       action="https://api.web3forms.com/submit"
                       method="POST">
-                    <!-- Web3Forms access key -->
+                    <!-- Web3Forms public client access key.
+                         Restrict allowed domains in your Web3Forms dashboard
+                         (Settings → Allowed Domains) to prevent misuse. -->
                     <input type="hidden" name="access_key" value="d882123c-af77-4c73-9332-f97ae91d70e3">
                     <!-- Honeypot spam protection -->
                     <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">

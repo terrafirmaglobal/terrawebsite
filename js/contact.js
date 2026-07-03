@@ -27,6 +27,7 @@ if (contactForm) {
         // --- Submit to Web3Forms ---
         setStatus('', '');
         submitBtn.disabled = true;
+        submitBtn.setAttribute('aria-busy', 'true');
         submitBtn.textContent = 'Sending\u2026';
 
         try {
@@ -47,6 +48,7 @@ if (contactForm) {
             setStatus('Unable to send your message right now. Please try again or email us directly.', 'error');
         } finally {
             submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
             submitBtn.textContent = 'SEND';
         }
     });
