@@ -45,7 +45,9 @@
             --secondary-green: #2d6a4f;
             --light-green: #40916c;
             --warm-gold: #d4af37;
+            --deep-gold: #b8860b;
             --cream: #f5f1e8;
+            --feature-gradient-angle: 135deg;
         }
 
         /* Navigation */
@@ -205,11 +207,11 @@
             font-size: 0.9rem;
             font-weight: 600;
             color: rgba(255,255,255,0.9);
-            background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+            background: linear-gradient(var(--feature-gradient-angle), var(--secondary-green), var(--primary-green));
         }
 
         .opportunities-placeholder--gold {
-            background: linear-gradient(135deg, var(--warm-gold), #b8860b);
+            background: linear-gradient(var(--feature-gradient-angle), var(--warm-gold), var(--deep-gold));
             color: var(--primary-green);
         }
 
