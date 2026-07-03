@@ -298,38 +298,71 @@
             z-index: 1;
         }
 
-        /* Footer */
-        footer {
-            background: #0f2818;
-            color: white;
-            padding: 40px 60px;
+        .ethos-section {
+            background: #ffffff;
+            padding: 120px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .ethos-header {
             text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            margin-bottom: 70px;
         }
 
-        footer p {
-            color: rgba(255,255,255,0.7);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
+        .ethos-header h2 {
+            color: #7f96bd;
+            font-size: 2.6rem;
+            letter-spacing: 0.04em;
+            margin-bottom: 18px;
         }
 
-        .footer-legal {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 15px;
+        .ethos-layout {
+            display: grid;
+            grid-template-columns: minmax(0, 1.7fr) minmax(300px, 0.9fr);
+            gap: 80px;
+            align-items: start;
         }
 
-        .footer-legal a {
-            color: var(--warm-gold);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: opacity 0.3s ease;
+        .ethos-col p {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #111;
+            margin-bottom: 34px;
+            max-width: 100%;
         }
 
-        .footer-legal a:hover {
-            opacity: 0.8;
+        .ethos-col h3 {
+            font-size: 2rem;
+            font-weight: 500;
+            color: var(--primary-green);
+            margin-bottom: 28px;
+        }
+
+        .ethos-card {
+            margin-bottom: 34px;
+        }
+
+        .ethos-card h4 {
+            font-size: 1.35rem;
+            font-weight: 600;
+            color: #111;
+            margin-bottom: 14px;
+        }
+
+        .ethos-card p {
+            margin-bottom: 0;
+        }
+
+        .ethos-list {
+            display: grid;
+            gap: 26px;
+        }
+
+        .ethos-note {
+            font-size: 1.08rem;
+            line-height: 1.65;
+            color: #111;
         }
 
         @media (max-width: 768px) {
@@ -376,6 +409,25 @@
                 text-align: center !important;
                 margin-left: auto !important;
                 margin-right: auto !important;
+            }
+            .ethos-section {
+                padding: 80px 20px;
+            }
+            .ethos-header h2 {
+                font-size: 2rem;
+            }
+            .ethos-layout {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .ethos-col p {
+                font-size: 1rem;
+            }
+            .ethos-col h3 {
+                font-size: 1.6rem;
+            }
+            .ethos-card h4 {
+                font-size: 1.15rem;
             }
         }
     </style>
@@ -617,6 +669,46 @@
                style="display: inline-block; padding: 18px 48px; background: #d4af37; color: #1b4332; text-decoration: none; font-weight: 600; border-radius: 0;">
                 Visit TRIIBE Next-Gen Philanthropic Capital partner site →
             </a>
+        </div>
+    </section>
+
+    <!-- Ethos Section -->
+    <section class="ethos-section" id="ethos">
+        <div class="ethos-header">
+            <h2>OUR ETHOS</h2>
+        </div>
+        <div class="ethos-layout">
+            <div class="ethos-col">
+                <p>In our infrastructure projects, we pioneer sustainable and innovative solutions for urban development globally.</p>
+                <p>From emerging markets to mature economies, we focus on environmentally conscious design and cutting-edge technology.</p>
+                <p>Our initiatives aim to leave a lasting positive impact, harmonizing human needs with ecological responsibility for a future-forward approach to infrastructure development.</p>
+                <p>Our financial collaborations curate partners with classical and avant-garde approaches, showcasing brilliance in Commercial Litigation, depth in Private Equity, and innovation in Venture Capital.</p>
+                <p>We believe architecture is one of the key pillars of society for humans to be able to thrive.</p>
+                <p>A world where all people can prosper is possible if we design accommodation intelligently.</p>
+            </div>
+            <div class="ethos-col">
+                <h3>Our Current Portfolio</h3>
+                <div class="ethos-list">
+                    <div class="ethos-card">
+                        <p>We take preference to regenerative eco and luxury real estate projects.</p>
+                    </div>
+                    <div class="ethos-card">
+                        <p>Commercial, residential, hotels, eco-resorts.</p>
+                    </div>
+                    <div class="ethos-card">
+                        <p>Having represented projects in Georgia and Mexico we are currently venturing into UK/USA markets.</p>
+                    </div>
+                    <div class="ethos-card">
+                        <p>Social housing, alternative projects and industries also considered. We are familiar with many countries and regions around the world and will be gradually including them into our portfolio.</p>
+                    </div>
+                    <div class="ethos-card">
+                        <p>Crypto related endeavors also welcome.</p>
+                    </div>
+                    <div class="ethos-card">
+                        <p>Optimal deal sizes $10m USD to $100m USD. Structured leveraged deals.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
