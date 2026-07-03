@@ -455,6 +455,112 @@ a:hover {
     color: var(--text-light);
 }
 
+/* Modern Contact Section (screenshot style) */
+.contact-section {
+    background: #efefef;
+    padding: 4.5rem 1.5rem 5rem;
+}
+
+.contact-section-inner {
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.contact-heading {
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    color: #7a8da8;
+    margin-bottom: 2.2rem;
+    text-transform: uppercase;
+}
+
+.contact-subheading {
+    text-align: center;
+    color: #111;
+    font-size: 2.2rem;
+    font-weight: 400;
+    margin-bottom: 2.5rem;
+}
+
+.contact-form-modern .form-group-modern {
+    margin-bottom: 2rem;
+}
+
+.contact-form-modern .form-group-modern label {
+    font-size: 1.95rem;
+    font-weight: 400;
+    color: #2e2e2e;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form-modern .form-group-modern input,
+.contact-form-modern .form-group-modern textarea {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    border-radius: 0;
+    background: transparent;
+    padding: 0.2rem 0 0.45rem;
+    font-size: 1rem;
+    color: #1a1a1a;
+    resize: vertical;
+}
+
+.contact-form-modern .form-group-modern input:focus,
+.contact-form-modern .form-group-modern textarea:focus {
+    outline: none;
+    border-bottom-color: #808080;
+    box-shadow: none;
+}
+
+.submit-button-modern {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    margin-top: 0.6rem;
+    background: #000;
+    color: #fff;
+    border-radius: 0;
+    letter-spacing: 1px;
+    min-width: 110px;
+    padding: 0.85rem 1.6rem;
+}
+
+.submit-button-modern:hover {
+    background: #1d1d1d;
+    transform: none;
+    box-shadow: none;
+}
+
+.submit-button-modern:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.contact-legal {
+    margin-top: 2rem;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #5e6778;
+}
+
+.contact-success {
+    text-align: center;
+    min-height: 1.5rem;
+    margin-top: 0.9rem;
+    font-size: 1rem;
+}
+
+.contact-success.is-success {
+    color: #2d9c5d;
+}
+
+.contact-success.is-error {
+    color: #d64545;
+}
+
 /* Footer */
 .footer {
     background-color: var(--primary-color);
@@ -593,6 +699,14 @@ a:hover {
     /* Hide on desktop */
     @media (min-width: 769px) {
         .hamburger { display: none; }
+    }
+
+    .contact-heading {
+        font-size: 2rem;
+    }
+
+    .contact-subheading {
+        font-size: 1.8rem;
     }
 }
 
