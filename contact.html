@@ -60,29 +60,51 @@
 
             <div class="contact-form-wrapper">
                 <h2>Send us a Message</h2>
-                <form class="contact-form" id="contactForm">
+                <form class="contact-form" id="contactForm"
+                      action="https://api.web3forms.com/submit"
+                      method="POST">
+                    <!-- Web3Forms public client access key.
+                         Restrict allowed domains in your Web3Forms dashboard
+                         (Settings → Allowed Domains) to prevent misuse. -->
+                    <input type="hidden" name="access_key" value="d882123c-af77-4c73-9332-f97ae91d70e3">
+                    <!-- Honeypot spam protection -->
+                    <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" aria-hidden="true">
+
                     <div class="form-group">
-                        <label for="name">Name *</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="name">Name <span aria-label="required">*</span></label>
+                        <input type="text" id="name" name="name" autocomplete="name" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="email">Email *</label>
-                        <input type="email" id="email" name="email" required>
+                        <label for="email">Email <span aria-label="required">*</span></label>
+                        <input type="email" id="email" name="email" autocomplete="email" required>
                     </div>
 
                     <div class="form-group">
-                        <label for="subject">Subject *</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <label for="phone">Phone</label>
+                        <input type="tel" id="phone" name="phone" autocomplete="tel">
                     </div>
 
                     <div class="form-group">
-                        <label for="message">Message *</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <label for="interest">I'm interested in</label>
+                        <select id="interest" name="interest">
+                            <option value="" disabled selected>Select an option</option>
+                            <option value="Advisory Services">Advisory Services</option>
+                            <option value="Consulting">Consulting</option>
+                            <option value="Partnerships">Partnerships</option>
+                            <option value="General Inquiry">General Inquiry</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
 
-                    <button type="submit" class="submit-button">Send Message</button>
-                    <p class="form-note">All fields marked with * are required</p>
+                    <div class="form-group">
+                        <label for="notes">Other notes</label>
+                        <textarea id="notes" name="notes" rows="5"></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-button" id="submitBtn">SEND</button>
+                    <p class="form-note">Fields marked with <span aria-label="required">*</span> are required</p>
+                    <div id="formStatus" class="form-status" role="status" aria-live="polite"></div>
                 </form>
             </div>
         </div>

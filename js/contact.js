@@ -1,92 +1,62 @@
-// Contact Form Handler
+// Contact Form Handler — Web3Forms integration
 const contactForm = document.getElementById('contactForm');
+const submitBtn   = document.getElementById('submitBtn');
+const formStatus  = document.getElementById('formStatus');
 
 if (contactForm) {
-    contactForm.addEventListener('submit', (e) => {
+    contactForm.addEventListener('submit', async (e) => {
         e.preventDefault();
-        
-        // Get form data
-        const formData = new FormData(contactForm);
-        const data = {
-            name: formData.get('name'),
-            email: formData.get('email'),
-            subject: formData.get('subject'),
-            message: formData.get('message')
-        };
 
-        // Validate form
-        if (!data.name || !data.email || !data.subject || !data.message) {
-            showAlert('Please fill out all required fields', 'error');
+        // --- Client-side validation ---
+        const name  = contactForm.name.value.trim();
+        const email = contactForm.email.value.trim();
+
+        if (!name) {
+            setStatus('Please enter your name.', 'error');
+            contactForm.name.focus();
             return;
         }
 
-        // Validate email format
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (!emailRegex.test(data.email)) {
-            showAlert('Please enter a valid email address', 'error');
+        if (!email || !emailRegex.test(email)) {
+            setStatus('Please enter a valid email address.', 'error');
+            contactForm.email.focus();
             return;
         }
 
-        // Show success message (in production, this would send to a server)
-        showAlert('Thank you for your message! We will get back to you soon.', 'success');
-        
-        // Reset form
-        contactForm.reset();
+        // --- Submit to Web3Forms ---
+        setStatus('', '');
+        submitBtn.disabled = true;
+        submitBtn.setAttribute('aria-busy', 'true');
+        submitBtn.textContent = 'Sending\u2026';
+
+        try {
+            const formData = new FormData(contactForm);
+            const response = await fetch('https://api.web3forms.com/submit', {
+                method: 'POST',
+                body: formData
+            });
+            const result = await response.json();
+
+            if (response.ok && result.success) {
+                setStatus("Thank you! Your message has been sent. We\u2019ll be in touch within 24 business hours.", 'success');
+                contactForm.reset();
+            } else {
+                setStatus(result.message || 'Something went wrong. Please try again or email us directly.', 'error');
+            }
+        } catch (err) {
+            setStatus('Unable to send your message right now. Please try again or email us directly.', 'error');
+        } finally {
+            submitBtn.disabled = false;
+            submitBtn.removeAttribute('aria-busy');
+            submitBtn.textContent = 'SEND';
+        }
     });
 }
 
-// Alert Helper Function
-function showAlert(message, type) {
-    // Create alert element
-    const alertDiv = document.createElement('div');
-    alertDiv.className = `alert alert-${type}`;
-    alertDiv.textContent = message;
-    alertDiv.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        padding: 1rem 1.5rem;
-        background-color: ${type === 'success' ? '#2d9c5d' : '#e74c3c'};
-        color: white;
-        border-radius: 5px;
-        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        z-index: 1000;
-        animation: slideIn 0.3s ease;
-    `;
-
-    document.body.appendChild(alertDiv);
-
-    // Remove alert after 5 seconds
-    setTimeout(() => {
-        alertDiv.style.animation = 'slideOut 0.3s ease';
-        setTimeout(() => {
-            alertDiv.remove();
-        }, 300);
-    }, 5000);
+function setStatus(message, type) {
+    if (!formStatus) return;
+    formStatus.textContent = message;
+    formStatus.className = 'form-status' + (type ? ' form-status--' + type : '');
 }
 
-// Add animations
-const style = document.createElement('style');
-style.textContent = `
-    @keyframes slideIn {
-        from {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-        to {
-            transform: translateX(0);
-            opacity: 1;
-        }
-    }
-    @keyframes slideOut {
-        from {
-            transform: translateX(0);
-            opacity: 1;
-        }
-        to {
-            transform: translateX(400px);
-            opacity: 0;
-        }
-    }
-`;
-document.head.appendChild(style);
