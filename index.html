@@ -1,3 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Anthony Sandoval - Terra Firma Global - Regenerative Real Estate & Impact Investing">
+    <meta name="keywords" content="regenerative real estate, impact investing, family office advisory, sustainable development">
+    <title>Terra Firma Global | Regenerative Capital</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Terra Firma Global connects visionary capital with regenerative real estate, sustainable hospitality, mass timber, and climate-aligned projects worldwide.">
+    <meta name="keywords" content="regenerative real estate, impact investing, sustainable development, CLT, family office, green real estate, Terra Firma Global">
+    
+    <!-- Open Graph / Social Sharing (for rich previews) -->
+    <meta property="og:title" content="Terra Firma Global | Regenerative Capital">
+    <meta property="og:description" content="Strategic capital for regenerative real estate, sustainable hospitality, and transformative impact projects.">
+    <meta property="og:image" content="https://terrafirmaglobal.com/assets/logo.png">
+    <meta property="og:url" content="https://terrafirmaglobal.com">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Terra Firma Global | Regenerative Capital">
+    <meta name="twitter:description" content="Connecting capital with regenerative real estate and impact projects.">
+    <meta name="twitter:image" content="https://terrafirmaglobal.com/assets/logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="assets/Terra%20Firma%20Favicon%20icon.ico" type="image/x-icon">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            color: #1a1a1a;
+            background: #ffffff;
+            line-height: 1.6;
+        }
+
+        :root {
+            --primary-green: #1b4332;
+            --secondary-green: #2d6a4f;
+            --light-green: #40916c;
+            --warm-gold: #d4af37;
+            --cream: #f5f1e8;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0; width: 100%;
+            background: rgba(255,255,255,0.98);
+            z-index: 1000;
+            padding: 20px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(27,67,50,0.1);
+            backdrop-filter: blur(10px);
+        }
+
+        .logo-img {
+            height: 72px;
+            width: auto;
+            transition: all 0.3s ease;
+        }
+
+        .logo-img:hover { transform: scale(1.05); }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 50px;
+        }
+
+        nav a {
+            color: #333;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover { color: var(--primary-green); }
+
+        /* Hero */
+        .hero {
+            height: 100vh;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 0px;
+        }
+
+        .hero-video {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute; top: 0; left: 0;
+            width: 100%; height: 100%;
+            background: radial-gradient(circle, rgba(15,40,24,0.4) 0%, rgba(15,40,24,0.7) 100%);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative; z-index: 2;
+            text-align: center; color: white;
+            max-width: 900px; padding: 60px;
+        }
+
+        .hero-content h1 {
+            font-size: 4.5rem; font-weight: 300;
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 16px 40px; margin: 10px;
+            background: var(--warm-gold);
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--warm-gold);
+            border-radius: 0;
+            transition: all 0.3s;
+        }
+
+        .cta-button:hover {
+            background: transparent;
+            color: var(--warm-gold);
+        }
+
+        /* Sections */
+        section { padding: 100px 60px; max-width: 1400px; margin: 0 auto; }
+        h2 { font-size: 3rem; font-weight: 300; color: var(--primary-green); margin-bottom: 20px; }
+        .section-subtitle { font-size: 1.2rem; color: #666; margin-bottom: 60px; max-width: 600px; }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+        }
+
+        .card:hover { transform: translateY(-8px); }
+
+        .card-image {
+            height: 200px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+        }
+
+        .card-content { padding: 35px; }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 35px;
+        }
+
+        .service-card {
+            padding: 40px;
+            background: linear-gradient(135deg, var(--cream), white);
+            border-left: 4px solid var(--warm-gold);
+            border-radius: 0;
+        }
+
+        #services {
+            background-color: var(--secondary-green);
+        }
+
+        #services h2 {
+            color: white;
+        }
+
+        #services .section-subtitle {
+            color: rgba(255,255,255,0.9);
+        }
+
+        #network {
+            background: linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
+            border-top: 1px solid rgba(27,67,50,0.08);
+            border-bottom: 1px solid rgba(27,67,50,0.08);
+        }
+
+        .network-subtitle {
+            max-width: 760px;
+        }
+
+        .network-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 24px;
+        }
+
+        .network-card {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+            padding: 24px;
+            background: rgba(255,255,255,0.95);
+            border: 1px solid rgba(45,106,79,0.12);
+            box-shadow: 0 8px 24px rgba(27,67,50,0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .network-card:hover {
+            transform: translateY(-6px);
+            border-color: rgba(212,175,55,0.45);
+            box-shadow: 0 16px 32px rgba(27,67,50,0.12);
+        }
+
+        .network-card img {
+            max-width: 100%;
+            max-height: 72px;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            filter: saturate(0.98);
+        }
+
+        .contact-section {
+            background: #1a472e;
+            color: white;
+            text-align: center;
+            padding: 100px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: "";
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 2px;
+            background: var(--warm-gold);
+            opacity: 0.6;
+        }
+
+        .contact-section::after {
+            content: "";
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 120px;
+            height: 2px;
+            background: var(--warm-gold);
+            opacity: 0.6;
+        }
+
+        .contact-section h2 {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-section a {
+            color: var(--warm-gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-section h5 {
+            position: relative;
+            z-index: 1;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .contact-section p {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Footer */
+        footer {
+            background: #0f2818;
+            color: white;
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.7);
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-legal {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .footer-legal a {
+            color: var(--warm-gold);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: opacity 0.3s ease;
+        }
+
+        .footer-legal a:hover {
+            opacity: 0.8;
+        }
+
         @media (max-width: 768px) {
             .hero-content h1 { font-size: 2.8rem; }
             section { padding: 80px 20px; }
@@ -11,3 +345,281 @@
                 gap: 40px !important;
             }
         }
+    </style>
+</head>
+<body>
+    <!-- Hero -->
+    <section class="hero" id="home">
+        <video autoplay muted loop playsinline class="hero-video">
+            <source src="assets/meadow bg tf (1).mp4" type="video/mp4">
+            <source src="assets/meadow bg tf.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Building a More Beautiful World</h1>
+            <p>Strategic capital connecting visionary projects to regenerative development, sustainable hospitality, and lasting impact.</p>
+        </div>
+    </section>
+
+    <!-- Logo Video / Brand Animation (below hero) -->
+    <section style="padding: 60px 60px; text-align: center; background: #2d6a4f;">
+        <h3 style="margin-bottom: 20px; color: var(--primary-green);"></h3>
+        <video autoplay muted loop playsinline style="max-width: 100%; max-height: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <source src="assets/tflogovideo2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Terra Firma Global Vision Section with Background Image -->
+    <section style="position: relative; padding: 120px 60px; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-image: url('assets/natureriverwebsitebannerTF.webp'); background-size: cover; background-position: center;">
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 40, 24, 0.55); z-index: 1;"></div>
+        <div style="position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; color: white;">
+            <h2 style="font-size: 3.2rem; margin-bottom: 30px; color: white; font-weight: 300;">International Regenerative Real Estate Fundraising & Financial Consulting</h2>
+            <p style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.95);">Transforming the landscape of impact capital by connecting visionary founders and entrepreneurs with institutional capital that aligns profit with purpose—creating regenerative communities, sustainable enterprises, and lasting environmental and social returns.</p>
+        </div>
+    </section>
+
+    <!-- Unique Opportunities & The Business Section -->
+    <section style="display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; padding: 100px 60px; max-width: 1400px; margin: 0 auto;">
+        <!-- Left Column: Unique Opportunities -->
+        <div>
+            <h2 style="font-size: 2.8rem; margin-bottom: 40px; color: var(--primary-green);">Unique Opportunities</h2>
+            
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Capital Raising & Investment</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Access to institutional capital pools, family offices, and impact-aligned investors ready to deploy $500M+ in regenerative projects globally.</p>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Direct Access to Deal Flow</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Exclusive pipeline of vetted regenerative real estate, sustainable hospitality, mass timber, and climate-tech opportunities.</p>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Strategic Partnerships</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Network with leading developers, architects, and sustainability consultants to accelerate project development and ensure impact alignment.</p>
+            </div>
+
+            <div>
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Impact & Returns</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental & social returns alongside competitive financial performance.</p>
+            </div>
+        </div>
+
+        <!-- Right Column: The Business -->
+        <div>
+            <h2 style="font-size: 2.8rem; margin-bottom: 40px; color: var(--primary-green);">The Business</h2>
+            
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">What We Do</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">We bridge the gap between visionary founders and institutional capital. Terra Firma Global identifies, develops, and funds transformative real estate and climate solutions.</p>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Thesis</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Capital is flowing toward regenerative development. Institutional LPs and family offices are seeking projects that restore ecosystems while delivering returns.</p>
+            </div>
+
+            <div style="margin-bottom: 40px;">
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Competitive Edge</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Deep expertise in international real estate, LSE education, 20+ years of capital markets relationships, and a proven network across impact investing.</p>
+            </div>
+
+            <div>
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">The Outcome</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Accelerated project funding, de-risked capital deployment, and a portfolio of transformative investments creating genuine planetary restoration.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about-section" id="about">
+        <h2>About Anthony Sandoval</h2>
+        <p class="section-subtitle">Principal & Global Connector bridging visionary projects with aligned capital for transformative impact.</p>
+        
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
+            <div>
+                <h3>A Mission-Driven Leader</h3>
+                <p>Born in Caracas, Venezuela. British citizen educated at the London School of Economics. 20+ years in real estate, finance, and strategic partnerships.</p> <br>
+                <p><strong>Core Mission:</strong> Direct capital toward projects that improve communities, preserve nature, and create lasting value.</p>
+            </div>
+            
+            <!-- Your real profile photo -->
+            <div style="height:500px; overflow:hidden; box-shadow:0 20px 40px rgba(0,0,0,0.15);">
+                <img src="assets/asprofilepic.jpeg" 
+                     alt="Anthony Sandoval" 
+                     style="width:100%; height:100%; object-fit:cover;">
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Themes -->
+    <section id="themes">
+        <h2>Investment Themes & Examples</h2>
+        <p class="section-subtitle">Strategic focus areas where capital creates environmental, social, and financial returns.</p>
+        <div class="cards-grid">
+            <div class="card"><a href="https://www.forestcity.uk/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/regen.jpg" alt="Regenerative Real Estate" class="card-image" style="background: linear-gradient(135deg, var(--primary-green), var(--secondary-green)); color: white; font-weight: 600;"><h3 style="padding: 20px; color: var(--primary-green);">Regenerative Real Estate</h3></a></div>
+            <div class="card"><a href="https://vestigecollection.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/hospitality.jpg" alt="Sustainable Hospitality" class="card-image" style="background: linear-gradient(135deg, var(--secondary-green), var(--light-green)); color: white; font-weight: 600;"><h3 style="padding: 20px; color: var(--primary-green);">Sustainable Hospitality</h3></a></div>
+            <div class="card"><a href="https://www.youtube.com/watch?v=e-HvwbUhbss&t=1s" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/media.jpg" alt="Media & Education" class="card-image" style="background: linear-gradient(135deg, var(--light-green), var(--primary-green)); color: white; font-weight: 600;"><h3 style="padding: 20px; color: var(--primary-green);">Media & Education</h3></a></div>
+            <div class="card"><a href="https://dynavertholdings.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/energy.jpg" alt="Energy Transition" class="card-image" style="background: linear-gradient(135deg, var(--primary-green), var(--warm-gold)); color: white; font-weight: 600;"><h3 style="padding: 20px; color: var(--primary-green);">Energy Transition</h3></a></div>
+            <div class="card"><a href="https://dataprana.io/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/data.jpg" alt="Digital Infrastructure" class="card-image" style="background: linear-gradient(135deg, var(--secondary-green), var(--warm-gold)); color: white; font-weight: 600;"><h3 style="padding: 20px; color: var(--primary-green);">Digital Infrastructure</h3></a></div>
+            <div class="card"><a href="https://www.sanaracollective.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/wellness.jpg" alt="Longevity & Wellness" class="card-image" style="background: linear-gradient(135deg, var(--light-green), var(--warm-gold)); color: white; font-weight: 600;"><h3 style="padding: 20px; color: var(--primary-green);">Longevity & Wellness</h3></a></div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <h2>Services & Capabilities</h2>
+        <p class="section-subtitle">Institutional-grade advisory and capital formation.</p>
+        <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+            <div class="service-card"><h3>Capital Formation</h3><p>Raising institutional capital for regenerative projects.</p></div>
+            <div class="service-card"><h3>Family Office Introductions</h3><p>Connections with aligned investors.</p></div>
+            <div class="service-card"><h3>Strategic Advisory</h3><p>Positioning and market growth guidance.</p></div>
+            <div class="service-card"><h3>Pitch Deck Development</h3><p>Compelling investment materials.</p></div>
+        </div>
+    </section>
+
+    <!-- Our Network -->
+    <section id="network">
+        <h2>Our Network</h2>
+        <p class="section-subtitle network-subtitle">A curated partner network spanning hospitality, finance, data, wellness, and regenerative development across global markets.</p>
+        <div class="network-grid">
+            <a class="network-card" href="https://islandambassadori.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Island Ambassadori">
+                <img src="assets/partnerlogos/logoambasisl.png" alt="Island Ambassadori logo">
+            </a>
+            <a class="network-card" href="https://mardi.ge/" target="_blank" rel="noopener noreferrer" aria-label="Visit Mardi">
+                <img src="assets/partnerlogos/mardi%20h.png" alt="Mardi logo">
+            </a>
+            <a class="network-card" href="https://lareservatulum.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit La Reserva Tulum">
+                <img src="assets/partnerlogos/reservatulum.jpg" alt="La Reserva Tulum logo">
+            </a>
+            <a class="network-card" href="https://go.tradewithsequence.com/AS" target="_blank" rel="noopener noreferrer" aria-label="Visit Sequence">
+                <img src="assets/partnerlogos/sequence_edited.jpg" alt="Sequence logo">
+            </a>
+            <a class="network-card" href="https://sanarahotels.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sanarà">
+                <img src="assets/partnerlogos/Sanara_type_BL2.png" alt="Sanarà logo">
+            </a>
+            <a class="network-card" href="https://lightspace.earth/" target="_blank" rel="noopener noreferrer" aria-label="Visit Lightspace">
+                <img src="assets/partnerlogos/Lightspace-logo.jpeg" alt="Lightspace logo">
+            </a>
+            <a class="network-card" href="https://www.emeraldpinecapital.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Emerald Pine Capital">
+                <img src="assets/partnerlogos/Emerald%20Pine%20Logo.jpeg" alt="Emerald Pine Capital logo">
+            </a>
+            <a class="network-card" href="https://rizeetf.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Rize ETF">
+                <img src="assets/partnerlogos/rize-etf-black.png" alt="Rize ETF logo">
+            </a>
+            <a class="network-card" href="https://www.copperman.com/en" target="_blank" rel="noopener noreferrer" aria-label="Visit Copperman">
+                <img src="assets/partnerlogos/copperman.jpg" alt="Copperman logo">
+            </a>
+            <a class="network-card" href="https://dataprana.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dataprana">
+                <img src="assets/partnerlogos/Dataprana%20logo.jpeg" alt="Dataprana logo">
+            </a>
+            <a class="network-card" href="https://inmoandinvestment.com/en/team" target="_blank" rel="noopener noreferrer" aria-label="Visit In&amp;I">
+                <img src="assets/partnerlogos/IandI%20Eladia%20logo-web.png" alt="In&amp;I logo">
+            </a>
+            <a class="network-card" href="https://vestigecollection.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Vestige Collection">
+                <img src="assets/partnerlogos/VESTIGE%20COLLECTION%20%281%29.jpeg" alt="Vestige Collection logo">
+            </a>
+            <a class="network-card" href="https://zamaniislands.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Zamani Islands">
+                <img src="assets/partnerlogos/logo%20zamani%20islands%20%281%29.jpeg" alt="Zamani Islands logo">
+            </a>
+            <a class="network-card" href="https://park49.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Park 49">
+                <img src="assets/partnerlogos/P49-Lite-Red.001.png" alt="Park 49 logo">
+            </a>
+            <a class="network-card" href="https://www.vsv-asg.ch/en/" target="_blank" rel="noopener noreferrer" aria-label="Visit APW">
+                <img src="assets/partnerlogos/logoapw.png" alt="APW logo">
+            </a>
+            <a class="network-card" href="https://innovationsoftheworld.com/logos-capital/" target="_blank" rel="noopener noreferrer" aria-label="Visit Logos Capital">
+                <img src="assets/partnerlogos/logos.png" alt="Logos Capital logo">
+            </a>
+        </div>
+    </section>
+
+    <!-- Logo Video / Brand Animation (above footer) -->
+    <section style="padding: 60px 60px; text-align: center; background: #2d6a4f;">
+        <h3 style="margin-bottom: 20px; color: var(--primary-green);"></h3>
+        <video autoplay muted loop playsinline style="max-width: 100%; max-height: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+            <source src="assets/tfinteractivelogo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </section>
+
+    <!-- Vesperstone Vision Section with Video Background -->
+    <section style="position: relative; padding: 120px 60px; min-height: 700px; display: flex; align-items: center; text-align: center; overflow: hidden;">
+        
+        <!-- Background Video -->
+        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
+            <source src="assets/waterfallc.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        
+        <!-- Dark Overlay for Readability -->
+        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 40, 24, 0.65); z-index: 2;"></div>
+        
+        <!-- Content -->
+        <div style="position: relative; z-index: 3; max-width: 1000px; margin: 0 auto; color: white;">
+            <h2 style="font-size: 3.2rem; margin-bottom: 30px;"></h2>
+            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 60px; line-height: 1.7;">
+                We are building the next generation of regenerative communities — places where capital, nature, and human flourishing converge.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
+                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 0;">
+                    <h3>Regenerative Development</h3>
+                    <p>Creating communities that restore ecosystems while delivering strong financial returns and nature-positive design.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 0;">
+                    <h3>Impact Capital</h3>
+                    <p>Connecting visionary family offices and institutional capital with projects that deliver measurable environmental and social returns.</p>
+                </div>
+                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 0;">
+                    <h3>Sustainable Hospitality</h3>
+                    <p>Luxury eco-resorts and wellness communities that blend regenerative practices with exceptional guest experiences.</p>
+                </div>
+            </div>
+            
+            <a href="https://www.triibe.org/" 
+               target="_blank" 
+               style="display: inline-block; padding: 18px 48px; background: #d4af37; color: #1b4332; text-decoration: none; font-weight: 600; border-radius: 0;">
+                Visit TRIIBE Next-Gen Philanthropic Capital partner site →
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact-section">
+        <h2>Let's Create Something Meaningful</h2>
+        <a href="https://www.linkedin.com/company/terra-firma-advisory-group/" target="_blank">
+            <h5>Terra Firma Global Advisory Ltd</h5>
+        </a>
+
+        <p style="font-style: italic; font-weight: 400; color: rgba(255,255,255,0.95);">
+167-169 Great Portland Street, London W1W5PF, United Kingdom <br>
+CERTIFICATE OF INCORPORATION OF A PRIVATE LIMITED COMPANY <br>
+Company Number: 15513200
+Companies House, Cardiff 2024 <br>
+The Registrar of Companies for England and Wales.
+        </p>
+    </section>
+
+    <!-- Footer with Legal Links -->
+    <footer>
+        <p>&copy; 2026 Terra Firma Global. All rights reserved. | Terra Firma Global Advisory Ltd</p>
+        <div class="footer-legal">
+            <a href="terms.html">Terms of Service</a>
+            <a href="privacy.html">Privacy Policy</a>
+            <a href="disclaimers.html">Disclaimers</a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
