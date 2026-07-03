@@ -166,9 +166,56 @@
             justify-content: center;
             color: white;
             font-size: 3rem;
+            object-fit: cover;
+            width: 100%;
         }
 
         .card-content { padding: 35px; }
+
+        /* Opportunities Section */
+        .opportunities-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .opportunities-card {
+            background: white;
+            border-radius: 0;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+            transition: all 0.3s ease;
+        }
+
+        .opportunities-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.15);
+        }
+
+        .opportunities-image {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .opportunities-content {
+            padding: 45px;
+        }
+
+        .opportunities-content h3 {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .opportunities-content p {
+            font-size: 1rem;
+            color: #555;
+            line-height: 1.8;
+        }
 
         .services-grid {
             display: grid;
@@ -277,6 +324,10 @@
             .hero-content h1 { font-size: 2.8rem; }
             section { padding: 80px 20px; }
             footer { padding: 30px 20px; }
+            .opportunities-section {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
         }
     </style>
 </head>
@@ -354,7 +405,29 @@
     </div>
 </section>
 
-    
+    <!-- Unique Opportunities & The Business Section -->
+    <section style="padding: 100px 60px; max-width: 1400px; margin: 0 auto;">
+        <div class="opportunities-section">
+            <!-- Unique Opportunities Card -->
+            <div class="opportunities-card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Unique Opportunities" class="opportunities-image">
+                <div class="opportunities-content">
+                    <h3>Unique Opportunities</h3>
+                    <p>Our curated list of real estate & other investments offer lucrative possibilities. Vetted quality & experienced teams</p>
+                </div>
+            </div>
+
+            <!-- The Business Card -->
+            <div class="opportunities-card">
+                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="The Business" class="opportunities-image">
+                <div class="opportunities-content">
+                    <h3>The Business</h3>
+                    <p>Terra Firma - a consulting venture spearheaded by Anthony Sandoval.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- About -->
 <!-- About -->
 <section class="about-section" id="about">
