@@ -184,10 +184,59 @@
         }
 
         .contact-section {
-            background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+            background: #1a472e;
             color: white;
             text-align: center;
             padding: 100px 60px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .contact-section::before {
+            content: "✦";
+            position: absolute;
+            top: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: var(--warm-gold);
+            opacity: 0.6;
+        }
+
+        .contact-section::after {
+            content: "✦";
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 2rem;
+            color: var(--warm-gold);
+            opacity: 0.6;
+        }
+
+        .contact-section h2 {
+            color: white;
+            position: relative;
+            z-index: 1;
+        }
+
+        .contact-section a {
+            color: var(--warm-gold);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-section h5 {
+            position: relative;
+            z-index: 1;
+            margin-top: 40px;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+
+        .contact-section p {
+            position: relative;
+            z-index: 1;
         }
 
         /* Footer */
@@ -418,15 +467,17 @@
     <!-- Contact -->
     <section id="contact" class="contact-section">
         <h2>Let's Create Something Meaningful</h2>
-        <a href="https://www.linkedin.com/company/terra-firma-advisory-group/" target="_blank" style="color:var(--warm-gold);">
-   <br> <h5>Terra Firma Global Advisory Ltd  </a>  <br>
+        <a href="https://www.linkedin.com/company/terra-firma-advisory-group/" target="_blank">
+            <h5>Terra Firma Global Advisory Ltd</h5>
+        </a>
 
         <p style="font-style: italic; font-weight: 400; color: rgba(255,255,255,0.95);">
 167-169 Great Portland Street, London W1W5PF, United Kingdom <br>
 CERTIFICATE OF INCORPORATION OF A PRIVATE LIMITED COMPANY <br>
 Company Number: 15513200
 Companies House, Cardiff 2024 <br>
-The Registrar of Companies for England and Wales.</p> </h5> 
+The Registrar of Companies for England and Wales.
+        </p>
     </section>
 
     <!-- Footer with Legal Links -->
