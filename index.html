@@ -193,11 +193,24 @@
             box-shadow: 0 12px 40px rgba(0,0,0,0.15);
         }
 
-        .opportunities-image {
+        .opportunities-placeholder {
             width: 100%;
             height: 350px;
-            object-fit: cover;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            text-transform: uppercase;
+            letter-spacing: 0.18em;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: rgba(255,255,255,0.9);
+            background: linear-gradient(135deg, var(--secondary-green), var(--primary-green));
+        }
+
+        .opportunities-placeholder--gold {
+            background: linear-gradient(135deg, var(--warm-gold), #b8860b);
+            color: var(--primary-green);
         }
 
         .opportunities-content {
@@ -410,7 +423,7 @@
         <div class="opportunities-section">
             <!-- Unique Opportunities Card -->
             <div class="opportunities-card">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="Unique Opportunities" class="opportunities-image">
+                <div class="opportunities-placeholder" aria-label="Unique Opportunities image placeholder">Image Placeholder</div>
                 <div class="opportunities-content">
                     <h3>Unique Opportunities</h3>
                     <p>Our curated list of real estate & other investments offer lucrative possibilities. Vetted quality & experienced teams</p>
@@ -419,7 +432,7 @@
 
             <!-- The Business Card -->
             <div class="opportunities-card">
-                <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&q=80" alt="The Business" class="opportunities-image">
+                <div class="opportunities-placeholder opportunities-placeholder--gold" aria-label="The Business image placeholder">Image Placeholder</div>
                 <div class="opportunities-content">
                     <h3>The Business</h3>
                     <p>Terra Firma - a consulting venture spearheaded by Anthony Sandoval.</p>
