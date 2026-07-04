@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-latest
     environment:
       name: github-pages
-      url: ${{ steps.deploy.outputs.page_url || steps.deploy_retry.outputs.page_url }}
+      url: ${{ steps.deploy.outcome == 'success' && steps.deploy.outputs.page_url || steps.deploy_retry.outputs.page_url }}
 
     steps:
       - name: Checkout
@@ -43,7 +43,3 @@ jobs:
         id: deploy_retry
         if: steps.deploy.outcome == 'failure'
         uses: actions/deploy-pages@v4
-
-      - name: Fail deployment if retry also failed
-        if: steps.deploy.outcome == 'failure' && steps.deploy_retry.outcome == 'failure'
-        run: exit 1
