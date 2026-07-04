@@ -184,7 +184,30 @@
         }
 
         #services {
+            position: relative;
             background-color: var(--secondary-green);
+            overflow: hidden;
+        }
+
+        .services-video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .services-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(15, 40, 24, 0.55);
+            z-index: 1;
+        }
+
+        .services-content {
+            position: relative;
+            z-index: 2;
         }
 
         #services h2 {
@@ -522,7 +545,7 @@
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 40, 24, 0.55); z-index: 1;"></div>
         <div style="position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; color: white;">
             <h2 style="font-size: 3.2rem; margin-bottom: 30px; color: white; font-weight: 300;">International Regenerative Real Estate Fundraising & Financial Consulting</h2>
-            <p style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.95);">Transforming the landscape of impact capital by connecting visionary founders and entrepreneurs with institutional investors, family offices, and strategic partners who share a commitment to regenerative growth and lasting value creation.</p>
+            <p style="font-size: 1.25rem; line-height: 1.7; color: rgba(255,255,255,0.95);">Transforming the landscape of impact capital by connecting visionary founders and entrepreneurs with institutional funding partners worldwide.</p>
         </div>
     </section>
 
@@ -534,22 +557,22 @@
             
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Capital Raising & Investment</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Access to institutional capital pools, family offices, and impact-aligned investors ready to deploy $500M+ in regenerative development, hospitality, and climate-forward infrastructure.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Access to institutional capital pools, family offices, and impact-aligned investors ready to deploy $500M+ in regenerative projects globally.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Direct Access to Deal Flow</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Exclusive pipeline of vetted regenerative real estate, sustainable hospitality, mass timber, and climate-tech opportunities curated across Europe, the UK, North America, and emerging markets.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Exclusive pipeline of vetted regenerative real estate, sustainable hospitality, mass timber, and climate-tech opportunities.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Strategic Partnerships</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Network with leading developers, architects, and sustainability consultants to accelerate project development and ensure operational excellence from inception to exit.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Network with leading developers, architects, and sustainability consultants to accelerate project development and ensure market readiness.</p>
             </div>
 
             <div>
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Impact & Returns</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental & social returns alongside competitive financial performance through disciplined execution and aligned partnerships.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental & social returns alongside competitive financial performance.</p>
             </div>
         </div>
 
@@ -559,22 +582,22 @@
             
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">What We Do</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">We bridge the gap between visionary founders and institutional capital. Terra Firma Global identifies, develops, and supports high-impact projects that align strong returns with ecological regeneration.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">We bridge the gap between visionary founders and institutional capital. Terra Firma Global identifies, develops, and funds high-impact regenerative projects.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Thesis</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Capital is flowing toward regenerative development. Institutional LPs and family offices are seeking projects that restore ecosystems, create resilient communities, and benefit from powerful long-term market tailwinds.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Capital is flowing toward regenerative development. Institutional LPs and family offices are seeking projects that restore ecosystems while generating durable returns.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Competitive Edge</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Deep expertise in international real estate, LSE education, 20+ years of capital markets relationships, and a proven ability to curate opportunities that resonate with sophisticated investors.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Deep expertise in international real estate, LSE education, 20+ years of capital markets relationships, and a proven cross-border network.</p>
             </div>
 
             <div>
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">The Outcome</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Accelerated project funding, de-risked capital deployment, and a portfolio of transformative investments creating generational value for stakeholders and the planet alike.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Accelerated project funding, de-risked capital deployment, and a portfolio of transformative investments creating generational impact.</p>
             </div>
         </div>
     </section>
@@ -605,8 +628,8 @@
         <h2>Investment Themes & Examples</h2>
         <p class="section-subtitle">Strategic focus areas where capital creates environmental, social, and financial returns.</p>
         <div class="cards-grid">
-            <div class="card"><a href="https://www.forestcity.uk/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/regen.jpg" alt="Regenerative Real Estate" class="card-image" style="width:100%;object-fit:cover;" /><div class="card-content"><h3>Regenerative Real Estate</h3><p>Nature-positive communities, eco-resorts, and sustainable mixed-use developments.</p></div></a></div>
-            <div class="card"><a href="https://vestigecollection.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/hospitality.jpg" alt="Sustainable Hospitality" class="card-image" style="width:100%;object-fit:cover;" /><div class="card-content"><h3>Sustainable Hospitality</h3><p>Luxury hospitality concepts combining wellness, conservation, and memorable guest experience.</p></div></a></div>
+            <div class="card"><a href="https://www.forestcity.uk/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/regen.jpg" alt="Regenerative Real Estate" class="card-image" style="width:100%;object-fit:cover;" /><div class="card-content"><h3>Regenerative Real Estate</h3><p>Sustainable communities, eco-villages, and nature-positive developments that restore land while delivering strong returns.</p></div></a></div>
+            <div class="card"><a href="https://vestigecollection.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/hospitality.jpg" alt="Sustainable Hospitality" class="card-image" style="width:100%;object-fit:cover;" /><div class="card-content"><h3>Sustainable Hospitality</h3><p>Luxury eco-resorts, wellness destinations, and regenerative hospitality concepts aligned with conscious travel and healthy living.</p></div></a></div>
             <div class="card"><a href="https://www.youtube.com/watch?v=e-HvwbUhbss&t=1s" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/media.jpg" alt="Media & Education" class="card-image" style="width:100%;object-fit:cover;" /><div class="card-content"><h3>Media & Education</h3><p>Content, learning, and community platforms that inspire regenerative living and systems change.</p></div></a></div>
             <div class="card"><a href="https://dynavertholdings.com/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/energy.jpg" alt="Energy Transition" class="card-image" style="width:100%;object-fit:cover;" /><div class="card-content"><h3>Energy Transition</h3><p>Clean energy, infrastructure, and resilient systems supporting a lower-carbon future.</p></div></a></div>
             <div class="card"><a href="https://dataprana.io/" target="_blank" style="text-decoration: none; color: inherit;"><img src="assets/data.jpg" alt="Digital Infrastructure" class="card-image" style="width:100%;object-fit:cover;" /><div class="card-content"><h3>Digital Infrastructure</h3><p>Technology-enabled businesses and data platforms powering sustainability, operations, and growth.</p></div></a></div>
@@ -616,13 +639,20 @@
 
     <!-- Services -->
     <section id="services">
-        <h2>Services & Capabilities</h2>
-        <p class="section-subtitle">Institutional-grade advisory and capital formation.</p>
-        <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
-            <div class="service-card"><h3>Capital Formation</h3><p>Raising institutional capital for regenerative projects.</p></div>
-            <div class="service-card"><h3>Family Office Introductions</h3><p>Connections with aligned investors.</p></div>
-            <div class="service-card"><h3>Strategic Advisory</h3><p>Positioning and market growth guidance.</p></div>
-            <div class="service-card"><h3>Pitch Deck Development</h3><p>Compelling investment materials.</p></div>
+        <video autoplay muted loop playsinline class="services-video">
+            <source src="assets/goldbarsanimation.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="services-overlay"></div>
+        <div class="services-content">
+            <h2>Services & Capabilities</h2>
+            <p class="section-subtitle">Institutional-grade advisory and capital formation.</p>
+            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
+                <div class="service-card"><h3>Capital Formation</h3><p>Raising institutional capital for regenerative projects.</p></div>
+                <div class="service-card"><h3>Family Office Introductions</h3><p>Connections with aligned investors.</p></div>
+                <div class="service-card"><h3>Strategic Advisory</h3><p>Positioning and market growth guidance.</p></div>
+                <div class="service-card"><h3>Pitch Deck Development</h3><p>Compelling investment materials.</p></div>
+            </div>
         </div>
     </section>
 
@@ -743,7 +773,7 @@
                 <p>In our infrastructure projects, we pioneer sustainable and innovative solutions for urban development globally.</p>
                 <p>From emerging markets to mature economies, we focus on environmentally conscious design and cutting-edge technology.</p>
                 <p>Our initiatives aim to leave a lasting positive impact, harmonizing human needs with ecological responsibility for a future-forward approach to infrastructure development.</p>
-                <p>Our financial collaborations curate partners with classical and avant-garde approaches, showcasing brilliance in Commercial Litigation, depth in Private Equity, and innovation in Venture Capital.</p>
+                <p>Our financial collaborations curate partners with classical and avant-garde approaches, showcasing brilliance in Commercial Litigation, depth in Private Equity, and innovation in ESG and tokenization strategies.</p>
                 <p>We believe architecture is one of the key pillars of society for humans to be able to thrive.</p>
                 <p>A world where all people can prosper is possible if we design accommodation intelligently.</p>
             </div>
@@ -760,7 +790,7 @@
                         <p>Having represented projects in Europe, Georgia and Mexico we are currently venturing into UK/USA markets and beyond.</p>
                     </div>
                     <div class="ethos-card">
-                        <p>Social housing, alternative projects and industries also considered. We are familiar with many countries and regions around the world and will be gradually including them into our portfolio.</p>
+                        <p>Social housing, alternative projects and industries also considered. We are familiar with many countries and regions around the world and will be gradually including them into our ecosystem.</p>
                     </div>
                     <div class="ethos-card">
                         <p>Crypto related endeavors also welcome.</p>
