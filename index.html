@@ -382,6 +382,31 @@
             max-width: 100%;
         }
 
+        .ethos-sdg-gallery {
+            display: grid;
+            gap: 24px;
+            margin-top: 36px;
+        }
+
+        .ethos-sdg-card {
+            background: #ffffff;
+            border: 1px solid rgba(127, 150, 189, 0.2);
+            box-shadow: 0 10px 30px rgba(27,67,50,0.08);
+            padding: 20px;
+        }
+
+        .ethos-sdg-card img {
+            display: block;
+            width: 100%;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .ethos-sdg-card.logo-card img {
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
         .ethos-col h3 {
             font-size: 2rem;
             font-weight: 500;
@@ -506,6 +531,13 @@
             }
             .ethos-col p {
                 font-size: 1rem;
+            }
+            .ethos-sdg-gallery {
+                gap: 18px;
+                margin-top: 28px;
+            }
+            .ethos-sdg-card {
+                padding: 12px;
             }
             .ethos-col h3 {
                 font-size: 1.6rem;
@@ -780,6 +812,15 @@
                 <p>Our financial collaborations curate partners with classical and avant-garde approaches, showcasing brilliance in Commercial Litigation, depth in Private Equity, and innovation in startups globally.</p>
                 <p>We believe architecture is one of the key pillars of society for humans to be able to thrive.</p>
                 <p>A world where all people can prosper is possible if we design accommodation intelligently.</p>
+
+                <div class="ethos-sdg-gallery">
+                    <div class="ethos-sdg-card logo-card">
+                        <img src="assets/E_SDG_logo_UN.jpg" alt="United Nations Sustainable Development Goals logo">
+                    </div>
+                    <div class="ethos-sdg-card">
+                        <img src="assets/sdgsUN.png" alt="United Nations Sustainable Development Goals icons">
+                    </div>
+                </div>
             </div>
             <div class="ethos-col">
                 <h3>Our Current Portfolio</h3>
