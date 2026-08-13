@@ -393,6 +393,8 @@
             border: 1px solid rgba(127, 150, 189, 0.2);
             box-shadow: 0 10px 30px rgba(27,67,50,0.08);
             padding: 20px;
+            display: block;
+            text-decoration: none;
         }
 
         .ethos-sdg-card img {
@@ -438,6 +440,55 @@
             font-size: 1.08rem;
             line-height: 1.65;
             color: #111;
+        }
+
+        .network-advantage-section {
+            background: linear-gradient(180deg, #ffffff 0%, #f8fbf8 100%);
+            border-top: 1px solid rgba(27,67,50,0.08);
+            border-bottom: 1px solid rgba(27,67,50,0.08);
+            padding: 110px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .network-advantage-section .content {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .network-advantage-section h2 {
+            color: var(--primary-green);
+            font-size: 2.6rem;
+            margin-bottom: 24px;
+        }
+
+        .network-advantage-section p {
+            font-size: 1.08rem;
+            line-height: 1.8;
+            color: #222;
+            margin-bottom: 22px;
+        }
+
+        .network-advantage-section .highlight {
+            font-weight: 700;
+            color: var(--primary-green);
+        }
+
+        .network-briefing-link {
+            display: inline-block;
+            margin-top: 26px;
+            padding: 16px 28px;
+            background: var(--primary-green);
+            color: #fff;
+            text-decoration: none;
+            font-weight: 600;
+            border: 2px solid var(--primary-green);
+            transition: all 0.3s ease;
+        }
+
+        .network-briefing-link:hover {
+            background: transparent;
+            color: var(--primary-green);
         }
 
         /* Footer */
@@ -519,7 +570,7 @@
                 margin-left: auto !important;
                 margin-right: auto !important;
             }
-            .ethos-section {
+            .ethos-section, .network-advantage-section {
                 padding: 80px 20px;
             }
             .ethos-header h2 {
@@ -547,6 +598,9 @@
             }
             .cards-grid {
                 grid-template-columns: 1fr;
+            }
+            .network-advantage-section h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -845,6 +899,25 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <section class="network-advantage-section" id="network-advantage">
+        <div class="content">
+            <h2>Our Network Advantage</h2>
+            <p>Terra Firma Global’s competitive edge is access. Not generic “we know people” access — a dense, senior-level professional network built over two decades and continuously expanded across family offices, private markets, real-estate capital and institutional platforms.</p>
+            <p><span class="highlight">By the numbers (LinkedIn network analysis):</span></p>
+            <p>10,600+ professional connections</p>
+            <p>2,250+ connections in capital, funds, private equity, venture, investment and asset management</p>
+            <p>1,170+ connections focused on real estate, property, hospitality and related development</p>
+            <p>100+ family-office principals, advisors and related decision-makers</p>
+            <p>1,000+ senior decision-maker roles (Partners, Managing Directors, Principals, Founders, CEOs and CIOs) operating in relevant capital and real-estate sectors</p>
+            <p>Senior relationships extend into platforms and firms collectively associated with approximately $3 trillion in assets under management and advisory capital — including Hamilton Lane (Co-CEO level), Apollo Global Management, Blue Owl Capital, StepStone Group, Pantheon, Oaktree, Coller Capital, LGT Capital Partners, Rockefeller Capital and others.</p>
+            <p><span class="highlight">What this means for projects seeking capital</span></p>
+            <p>We sit between visionary regenerative real estate, sustainable hospitality and climate-aligned projects on one side, and the family offices, institutional LPs and private-markets partners actively looking to deploy capital on the other. Our network is not theoretical. It is populated with people who write cheques, allocate mandates and underwrite deals in the exact sectors we cover.</p>
+            <p>Whether you are raising for a regenerative community, a sustainable hospitality asset, mass-timber development, or climate-aligned infrastructure in the $10–100M+ range (with capacity for larger structured transactions), Terra Firma Global exists to open the right doors and structure the conversations that move capital.</p>
+            <p><strong>Capital meets regenerative ambition.</strong><br>Let’s build something that lasts.</p>
+            <a class="network-briefing-link" href="Terra_Firma_Global_Network_Intelligence.pdf" download>Download more detailed Terra Firma Global Advisory Network Intelligence Briefing</a>
         </div>
     </section>
 
