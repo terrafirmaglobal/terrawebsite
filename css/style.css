@@ -830,3 +830,19 @@ section {
     color: inherit;
     text-decoration: none;
 }
+
+.top-video-wrap {
+    width: 100%;
+    margin-bottom: 36px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 16px 40px rgba(15, 40, 24, 0.18);
+    background: #000;
+}
+
+.top-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
