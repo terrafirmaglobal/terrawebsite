@@ -161,6 +161,44 @@
             }
         }
     </style>
+
+
+
+    /* Top Video */
+.top-video-wrap {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto 40px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+    background: #0f2818;
+}
+
+.top-video {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    object-fit: cover;
+    border-radius: 16px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .top-video-wrap {
+        margin-bottom: 30px;
+        border-radius: 12px;
+    }
+    
+    .top-video {
+        max-height: 280px;
+        border-radius: 12px;
+    }
+}
+
+
+    
 </head>
 <body>
     <nav>
