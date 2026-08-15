@@ -587,7 +587,7 @@ a:hover {
 
 /* Footer */
 .footer {
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
     color: white;
     padding: 3rem 2rem 1.5rem;
     margin-top: 4rem;
@@ -606,7 +606,7 @@ a:hover {
 }
 
 .footer-section p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     margin-bottom: 0;
 }
 
@@ -619,19 +619,19 @@ a:hover {
 }
 
 .footer-section a {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.9);
     transition: var(--transition);
 }
 
 .footer-section a:hover {
-    color: var(--accent-color);
+    color: #fff;
 }
 
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
-    color: rgba(255, 255, 255, 0.7);
+    border-top: 1px solid rgba(255, 255, 255, 0.35);
+    color: rgba(255, 255, 255, 0.9);
     font-size: 0.9rem;
 }
 
