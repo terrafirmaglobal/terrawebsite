@@ -832,7 +832,7 @@ section {
 }
 
 .top-video-wrap {
-    width: 100%;
+    width: 70%;
     margin-bottom: 36px;
     border-radius: 16px;
     overflow: hidden;
@@ -841,7 +841,7 @@ section {
 }
 
 .top-video {
-    width: 100%;
+    width: 50%;
     display: block;
     aspect-ratio: 16 / 9;
     object-fit: cover;
