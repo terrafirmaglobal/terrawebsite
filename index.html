@@ -116,34 +116,21 @@
             max-width: 900px; padding: 60px;
         }
 
-        .hero-content h1 {
-            font-size: 4.5rem; font-weight: 300;
-            margin-bottom: 30px;
-        }
+       .hero-content h1 {
+           font-size: 4.5rem; font-weight: 300;
+           margin-bottom: 30px;
+       }
 
-        @@
-         .hero-content {
-             position: relative; z-index: 2;
-             text-align: center; color: white;
-             max-width: 900px; padding: 60px;
-         }
-+
-+        .beautifultitlelink,
-+        .beautifultitlelink:visited,
-+        .beautifultitlelink:hover,
-+        .beautifultitlelink:active {
-+            color: #fff;
-+            text-decoration: none;
-+        }
-+
-+        .beautifultitlelink:hover {
-+            opacity: 0.95;
-+        }
- 
-         .hero-content h1 {
-             font-size: 4.5rem; font-weight: 300;
-             margin-bottom: 30px;
-         }
+       .hero-content h1 a.beautifultitlelink,
+       .hero-content h1 a.beautifultitlelink:visited,
+       .hero-content h1 a.beautifultitlelink:hover,
+       .hero-content h1 a.beautifultitlelink:active,
+       .hero-content h1 a.beautifultitlelink:focus {
+           color: #ffffff !important;
+           text-decoration: none !important;
+           border-bottom: none !important;
+           -webkit-text-fill-color: #ffffff;
+       }
 
         .cta-button {
             display: inline-block;
