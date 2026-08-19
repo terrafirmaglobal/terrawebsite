@@ -133,6 +133,32 @@
             border-radius: 0;
         }
 
+        /* Banner links (Introduction Deck + Advisory Fees) */
+        .banner-links {
+            display: flex;
+            gap: 24px;
+            justify-content: center;
+            align-items: center;
+            margin: 22px 0 28px;
+            flex-wrap: wrap;
+        }
+
+        .banner-links a {
+            display: block;
+            flex: 1 1 420px; /* allow to grow/shrink, base width */
+            max-width: 520px;
+            text-align: center;
+        }
+
+        .banner-img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+            border: 1px solid rgba(0,0,0,0.06);
+        }
+
         footer {
             background: var(--dark-bg);
             color: white;
@@ -189,6 +215,15 @@
                 max-height: 280px;
                 border-radius: 0;
             }
+
+            .banner-links {
+                flex-direction: column;
+                gap: 16px;
+            }
+
+            .banner-links a {
+                max-width: 100%;
+            }
         }
     </style>
 </head>
@@ -211,33 +246,39 @@
         <section class="who-we-work-with">
             <h1>Who We Work With</h1>
 
-            <p>Our clients and partners form a carefully curated network across the real estate, infrastructure, investment, and sustainability ecosystems. We specialize in connecting capital, expertise, and opportunity within the regenerative economy—bridging sophisticated investors with high-impact projects that deliver both strong financial returns and measurable ecological and social value.</p>
+            <p>Our clients and partners form a carefully curated network across the real estate, infrastructure, investment, and sustainability ecosystems. We specialize in connecting capital, ex[...]
             <br></br>
             <h2>Institutional &amp; Private Capital Partners</h2>
             <br></br>
-            <p>We primarily engage with real estate funds focused on regenerative and impact-oriented investments, private wealth platforms, and family offices seeking differentiated, long-term opportunities. Our work supports diversified portfolios by providing strategic input on business plans, capital structures, and market positioning. We regularly collaborate with private equity professionals, venture capital firms, business development officers, and institutional stakeholders to align capital with projects that meet rigorous underwriting and impact criteria.</p>
+            <p>We primarily engage with real estate funds focused on regenerative and impact-oriented investments, private wealth platforms, and family offices seeking differentiated, long-term o[...]
             <br></br>
             <h2>Transaction &amp; Deal Facilitation</h2>
             <br></br>
-            <p>A core part of our role is matching buyers and sellers of regenerative real estate and related assets. We facilitate introductions and structured dialogues between executives, C-suite leaders, and key decision-makers on both sides of transactions. This includes working closely with commercial acquisitions directors, commercial analysts, wholesalers, and REIT professionals to identify and advance opportunities ranging from eco-resorts and sustainable hospitality assets to mixed-use and infrastructure developments.</p>
+            <p>A core part of our role is matching buyers and sellers of regenerative real estate and related assets. We facilitate introductions and structured dialogues between executives, C-su[...]
             <br></br>
             <h2>Project Sponsors &amp; Operators</h2>
             <br></br>
-            <p>We support infrastructure and real estate projects that integrate sustainable and regenerative approaches. Our portfolio activity spans both emerging markets and mature economies, with a consistent emphasis on fusing ecological principles with modern technology, innovative design, and forward-looking operational models. Clients and partners in this category include hoteliers, developers of commercial and residential assets, climate-finance specialists, and operators advancing nature-positive hospitality and real estate concepts.</p>
+            <p>We support infrastructure and real estate projects that integrate sustainable and regenerative approaches. Our portfolio activity spans both emerging markets and mature economies, [...]
             <br></br>
             <h2>Broader Ecosystem Partners</h2>
             <br></br>
-            <p>Beyond direct capital and project relationships, we engage with a wider network that includes networking platforms, brand partners, and specialists in climate finance and AI-enabled commercial analysis. This ecosystem enables us to surface high-quality deal flow, refine investment theses, and support the professionalization of regenerative projects as they scale.</p>
+            <p>Beyond direct capital and project relationships, we engage with a wider network that includes networking platforms, brand partners, and specialists in climate finance and AI-enable[...]
 
-            <p>Whether you are deploying capital into regenerative real estate, seeking strategic advisory on business planning and market entry, or requiring structured fundraising support, we bring deep sector knowledge, an international network, and a practical focus on execution.</p>
+            <p>Whether you are deploying capital into regenerative real estate, seeking strategic advisory on business planning and market entry, or requiring structured fundraising support, we b[...]
             <br></br>
             <h2>Interested in consulting services or fundraising advisory?</h2>
             <br></br>
             <p>To explore how we can support your objectives, please request access to our materials:</p>
-            <ul>
-                <li><a href="https://bit.ly/TerraFirmaIntroDeck" target="_blank" rel="noopener">Terra Firma Introduction Deck</a></li>
-                <li><a href="http://bit.ly/TerraFirmaAdvisoryFees" target="_blank" rel="noopener">Terra Firma Advisory Fees</a></li>
-            </ul>
+
+            <div class="banner-links">
+                <a href="https://bit.ly/TerraFirmaIntroDeck" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/tfintrodeckbanner.jpg" alt="Terra Firma Introduction Deck" class="banner-img">
+                </a>
+                <a href="https://bit.ly/TerraFirmaAdvisoryFees" target="_blank" rel="noopener noreferrer">
+                    <img src="assets/tffeesbanner.jpg" alt="Terra Firma Advisory Fees" class="banner-img">
+                </a>
+            </div>
+
             <br></br>
             <p>We look forward to learning more about your priorities and discussing potential collaboration.</p>
         </section>
