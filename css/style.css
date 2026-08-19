@@ -9,6 +9,8 @@
     --bg-white: #ffffff;
     --border-color: #e0e0e0;
     --transition: all 0.3s ease;
+    --primary-green: #1b4332;
+    --warm-gold: #d4af37;
 }
 
 /* Global Styles */
@@ -138,17 +140,17 @@ a:hover {
 /* Hero Section */
  
 /*
-.hero {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
-    color: white;
-    padding: 6rem 2rem;
-    text-align: center;
-    min-height: 500px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}    
-      
+ .hero {
+     background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+     color: white;
+     padding: 6rem 2rem;
+     text-align: center;
+     min-height: 500px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }    
+       
 */
 
 
@@ -585,12 +587,38 @@ a:hover {
     color: #d64545;
 }
 
-/* Footer */
-.footer {
-    background-color: var(--accent-color);
+/* Footer - updated to match index.html visual style */
+footer, .footer {
+    background: var(--primary-green);
     color: white;
-    padding: 3rem 2rem 1.5rem;
-    margin-top: 4rem;
+    padding: 40px 60px;
+    text-align: center;
+    border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+
+footer p, .footer p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    margin-bottom: 15px;
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.footer-legal a {
+    color: var(--warm-gold);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: opacity 0.3s ease;
+}
+
+.footer-legal a:hover {
+    opacity: 0.8;
 }
 
 .footer-content {
@@ -668,7 +696,7 @@ a:hover {
     object-fit: cover;
     display: block;
 }
-+/
++/ 
 
 /* Logo Video Section */
 .logo-video-section {
