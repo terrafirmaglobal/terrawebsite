@@ -544,6 +544,33 @@
         }
 
         .footer-legal a { font-size: 0.85rem; }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 20px;
+            }
+
+            section {
+                padding: 60px 20px;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+
+            .two-col-mobile {
+                grid-template-columns: 1fr !important;
+                gap: 40px !important;
+            }
+
+            .ethos-layout {
+                grid-template-columns: 1fr !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -559,7 +586,7 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <video class="hero-video" autoplay muted loop playsinline>
             <source src="assets/hero_video.mp4" type="video/mp4">
         </video>
