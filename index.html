@@ -530,147 +530,49 @@
             border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        footer p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
-        }
+        footer p { margin: 0; color: rgba(255,255,255,0.85); }
+
+        footer a { color: var(--warm-gold); text-decoration: none; }
+        footer a:hover { opacity: 0.8; }
 
         .footer-legal {
             display: flex;
             justify-content: center;
             gap: 30px;
+            margin-top: 20px;
             flex-wrap: wrap;
-            margin-top: 15px;
         }
 
-        .footer-legal a {
-            color: var(--warm-gold);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: opacity 0.3s ease;
-        }
-
-        .footer-legal a:hover {
-            opacity: 0.8;
-        }
-
-        @media (max-width: 768px) {
-            .hero-content h1 { font-size: 2.8rem; }
-            section { padding: 80px 20px; }
-            footer { padding: 30px 20px; }
-            .network-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
-            .network-card { min-height: 120px; padding: 20px; }
-            .network-card img { max-height: 56px; }
-            .two-col-mobile {
-                display: grid !important;
-                grid-template-columns: 1fr !important;
-                gap: 32px !important;
-                align-items: start !important;
-                width: 100% !important;
-                max-width: 100% !important;
-                padding-left: 20px !important;
-                padding-right: 20px !important;
-                margin: 0 auto !important;
-                overflow-x: hidden !important;
-            }
-            .two-col-mobile > div {
-                width: 100% !important;
-                min-width: 0 !important;
-                max-width: 100% !important;
-            }
-            .two-col-mobile h2 {
-                font-size: 2.2rem !important;
-                margin-bottom: 18px !important;
-                text-align: left !important;
-                word-break: break-word;
-            }
-            .two-col-mobile h3 {
-                font-size: 1.2rem !important;
-                line-height: 1.35 !important;
-                word-break: break-word;
-            }
-            .two-col-mobile p {
-                font-size: 1rem !important;
-                line-height: 1.75 !important;
-                word-break: break-word;
-            }
-            .mobile-center-text {
-                text-align: center !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-            }
-            .ethos-section, .network-advantage-section {
-                padding: 80px 20px;
-            }
-            .ethos-header h2 {
-                font-size: 2rem;
-            }
-            .ethos-layout {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .ethos-col p {
-                font-size: 1rem;
-            }
-            .ethos-sdg-gallery {
-                gap: 18px;
-                margin-top: 28px;
-            }
-            .ethos-sdg-card {
-                padding: 12px;
-            }
-            .ethos-col h3 {
-                font-size: 1.6rem;
-            }
-            .ethos-card h4 {
-                font-size: 1.15rem;
-            }
-            .cards-grid {
-                grid-template-columns: 1fr;
-            }
-            .card-image-title {
-                font-size: 1.8rem;
-                padding: 18px 20px;
-            }
-            .network-advantage-section h2 {
-                font-size: 2rem;
-            }
-        }
+        .footer-legal a { font-size: 0.85rem; }
     </style>
 </head>
 <body>
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <video autoplay muted loop playsinline class="hero-video">
-            <source src="assets/meadow bg tf (1).mp4" type="video/mp4">
-            <source src="assets/meadow bg tf.mp4" type="video/mp4">
-            Your browser does not support the video tag.
+    <!-- Navigation -->
+    <nav>
+        <img src="assets/logo.png" alt="Terra Firma Global Logo" class="logo-img">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#network">Network</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <video class="hero-video" autoplay muted loop playsinline>
+            <source src="assets/hero_video.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
- <h1> <a class="beautifultitlelink" href="who-we-work-with.html" target="_self" aria-label="Building a More Beautiful World">
-    Building a More Beautiful World
-  </a>
-</h1>
-            <p>Strategic capital connecting visionary projects to regenerative development, sustainable hospitality, and lasting impact.</p>
+            <h1><a href="who-we-work-with.html" class="beautifultitlelink">Connecting Capital with Regenerative Real Estate</a></h1>
+            <p style="font-size: 1.3rem; margin-bottom: 30px; color: rgba(255,255,255,0.95);">Strategic partnership & fundraising advisory for impact-driven development worldwide</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
         </div>
     </section>
 
-    <!-- Logo Video / Brand Animation (below hero) -->
-    <section style="padding: 60px 60px; text-align: center; background: #f39c12;">
-        <h3 style="margin-bottom: 20px; color: var(--primary-green);"></h3>
-      <a class="titlelogo1" href="who-we-work-with.html" target="_self" aria-label="Who We Work With">
-        <video autoplay muted loop playsinline style="max-width: 100%; max-height: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-            <source src="assets/tflogovideo2.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video> 
-  </a>
-
-    </section>
-
     <!-- Terra Firma Global Vision Section with Background Image -->
- <section style="position: relative; padding: 120px 60px; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-image: url('assets/natureriverwebsitebannerTF.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+    <section style="position: relative; padding: 120px 60px; min-height: 600px; display: flex; align-items: center; justify-content: center; text-align: center; overflow: hidden; background-image: url('assets/natureriverwebsitebannerTF.webp'); background-size: cover; background-position: center; background-repeat: no-repeat;">
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: rgba(15, 40, 24, 0.55); z-index: 1;"></div>
         <div style="position: relative; z-index: 2; max-width: 1000px; margin: 0 auto; color: white;">
             <h2 style="font-size: 3.2rem; margin-bottom: 30px; color: white; font-weight: 300;">International Regenerative Real Estate Fundraising & Financial Consulting</h2>
@@ -686,22 +588,22 @@
             
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Capital Raising & Investment</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Access to institutional capital pools, family offices, and impact-aligned investors ready to deploy $500M+ in regener[...]
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Access to institutional capital pools, family offices, and impact-aligned investors ready to deploy $500M+ in regenerative real estate, sustainable hospitality, and climate-aligned infrastructure projects. We provide pathways to the capital that moves markets.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Direct Access to Deal Flow</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Exclusive pipeline of vetted regenerative real estate, sustainable hospitality, mass timber, and climate-tech opportu[...]
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Exclusive pipeline of vetted regenerative real estate, sustainable hospitality, mass timber, and climate-tech opportunities. Our network continuously sources high-quality projects aligned with impact and return profiles.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Strategic Partnerships</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Network with leading developers, architects, and sustainability consultants to accelerate project development and ens[...]
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Network with leading developers, architects, and sustainability consultants to accelerate project development and ensure world-class execution. We facilitate collaborations that strengthen every aspect of your initiative.</p>
             </div>
 
             <div>
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Impact & Returns</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental & social returns alongside competitive financial per[...]
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental & social returns alongside competitive financial performance. We partner on ventures built for lasting impact and sustainable value creation.</p>
             </div>
         </div>
 
@@ -711,297 +613,133 @@
             
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">What We Do</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">We bridge the gap between visionary founders and institutional capital. Terra Firma Global identifies, develops, and [...]
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">We bridge the gap between visionary founders and institutional capital. Terra Firma Global identifies, develops, and structures transformative real estate and infrastructure opportunities, connecting them with aligned capital partners and strategic expertise to drive scalable, regenerative development worldwide.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Thesis</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Capital is flowing toward regenerative development. Institutional LPs and family offices are seeking projects that re[...]
-            </div>
-
-            <div style="margin-bottom: 40px;">
-                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Competitive Edge</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Deep expertise in international real estate, LSE education, 20+ years of capital markets relationships, and a proven [...]
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Regenerative real estate and sustainable hospitality represent the next frontier in global capital deployment. Institutional investors and family offices are actively seeking differentiated, long-term opportunities that deliver both measurable impact and competitive returns in this emerging asset class.</p>
             </div>
 
             <div>
-                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">The Outcome</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Accelerated project funding, de-risked capital deployment, and a portfolio of transformative investments creating gen[...]
+                <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">How We Help</h3>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Through consulting, advisory services, and structured fundraising support, we help entrepreneurs navigate market entry, build compelling investment narratives, optimize capital structures, and accelerate deal flow to the institutions most likely to partner with you.</p>
             </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section class="about-section" id="about">
-        <h2>About Anthony Sandoval</h2>
-        <p class="section-subtitle">Principal & Global Connector bridging visionary projects with aligned capital for transformative impact.</p>
-        
-        <div style="display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:center;">
-            <div>
-                <h3>A Mission-Driven Leader</h3>
-                <p>Born in Caracas, Venezuela. British citizen educated at the London School of Economics. 20+ years in real estate, finance, and strategic partnerships.</p> <br>
-                <p><strong>Core Mission:</strong> Direct capital toward projects that improve communities, preserve nature, and create lasting value.</p>
-            </div>
-            
-            <!-- Profile video -->
-            <div style="height:500px; overflow:hidden; box-shadow:0 20px 40px rgba(0,0,0,0.15);">
-           <a class="asanim" href="https://www.linkedin.com/in/anthony-h-sandoval/details/" target="_self" aria-label="Anthony Sandoval Linkedin">
-               <video autoplay muted loop playsinline style="width:100%; height:100%; object-fit:cover;">
-                    <source src="assets/profileASanim.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-  </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Investment Themes -->
-    <section id="themes">
-        <h2>Investment Themes & Examples</h2>
-        <p class="section-subtitle">Strategic focus areas where capital creates environmental, social, and financial returns.</p>
-        <div class="cards-grid">
-            <div class="card"><a href="https://www.forestcity.uk/" target="_blank" style="text-decoration: none; color: inherit;"><div class="card-image-wrapper"><img src="assets/regen.jpg" alt="Regenerative Real Estate" class="card-image"><h3 class="card-image-title" aria-hidden="true">Green Real Estate</h3></div></a></div>
-            <div class="card"><a href="https://vestigecollection.com/" target="_blank" style="text-decoration: none; color: inherit;"><div class="card-image-wrapper"><img src="assets/hospitality.jpg" alt="Sustainable Hospitality" class="card-image"><h3 class="card-image-title" aria-hidden="true">Hospitality</h3></div></a></div>
-            <div class="card"><a href="https://www.youtube.com/watch?v=e-HvwbUhbss&t=1s" target="_blank" style="text-decoration: none; color: inherit;"><div class="card-image-wrapper"><img src="assets/media.jpg" alt="Media &amp; Education" class="card-image"><h3 class="card-image-title" aria-hidden="true">Impact Media</h3></div></a></div>
-            <div class="card"><a href="https://dynavertholdings.com/" target="_blank" style="text-decoration: none; color: inherit;"><div class="card-image-wrapper"><img src="assets/energy.jpg" alt="Energy Transition" class="card-image"><h3 class="card-image-title" aria-hidden="true">Energy</h3></div></a></div>
-            <div class="card"><a href="https://dataprana.io/" target="_blank" style="text-decoration: none; color: inherit;"><div class="card-image-wrapper"><img src="assets/data.jpg" alt="Digital Infrastructure" class="card-image"><h3 class="card-image-title" aria-hidden="true">AI</h3></div></a></div>
-            <div class="card"><a href="https://www.sanaracollective.com/" target="_blank" style="text-decoration: none; color: inherit;"><div class="card-image-wrapper"><img src="assets/wellness.jpg" alt="Longevity &amp; Wellness" class="card-image"><h3 class="card-image-title" aria-hidden="true">Wellness</h3></div></a></div>
-        </div>
-    </section>
-
-    <!-- Services -->
+    <!-- Services Section -->
     <section id="services">
-        <video autoplay muted loop playsinline class="services-video">
-            <source src="assets/goldbarsanimation.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="services-overlay"></div>
         <div class="services-content">
-            <h2>Services & Capabilities</h2>
-            <p class="section-subtitle">Institutional-grade advisory and capital formation.</p>
-            <div class="services-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 30px;">
-                <div class="service-card"><h3>Capital Formation</h3><p>Raising institutional capital for regenerative projects.</p></div>
-                <div class="service-card"><h3>Family Office Introductions</h3><p>Connections with aligned investors.</p></div>
-                <div class="service-card"><h3>Strategic Advisory</h3><p>Positioning and market growth guidance.</p></div>
-                <div class="service-card"><h3>Pitch Deck Development</h3><p>Compelling investment materials.</p></div>
+            <h2 style="color: white;">Our Services</h2>
+            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Comprehensive support for founders and entrepreneurs in regenerative real estate and impact investing</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3 style="color: var(--primary-green); font-size: 1.3rem; margin-bottom: 12px;">Fundraising Advisory</h3>
+                    <p style="color: #333; line-height: 1.7;">Strategic guidance on capital structure, investment thesis development, and investor targeting to accelerate your path to funding.</p>
+                </div>
+                <div class="service-card">
+                    <h3 style="color: var(--primary-green); font-size: 1.3rem; margin-bottom: 12px;">Investor Relations</h3>
+                    <p style="color: #333; line-height: 1.7;">Direct access to curated networks of institutional investors, family offices, and impact-aligned capital partners actively deploying in your sector.</p>
+                </div>
+                <div class="service-card">
+                    <h3 style="color: var(--primary-green); font-size: 1.3rem; margin-bottom: 12px;">Market & Strategic Advisory</h3>
+                    <p style="color: #333; line-height: 1.7;">Expert analysis on market dynamics, competitive positioning, and strategic entry strategies to strengthen your competitive advantage.</p>
+                </div>
+                <div class="service-card">
+                    <h3 style="color: var(--primary-green); font-size: 1.3rem; margin-bottom: 12px;">Deal Structuring & Facilitation</h3>
+                    <p style="color: #333; line-height: 1.7;">Support in defining transaction structures and facilitating introductions between complementary parties to accelerate deal velocity.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Our Network -->
+    <!-- Network Section -->
     <section id="network">
-        <h2>Our Network</h2>
-        <p class="section-subtitle network-subtitle">A curated partner network spanning hospitality, finance, data, wellness, and regenerative development across global markets.</p>
+        <h2>Our Network & Partnerships</h2>
+        <p class="network-subtitle">We partner with leading organizations shaping the future of regenerative real estate and sustainable development</p>
         <div class="network-grid">
-            <a class="network-card" href="https://islandambassadori.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Island Ambassadori">
-                <img src="assets/partnerlogos/logoambasisl.png" alt="Island Ambassadori logo">
+            <a href="https://www.aubergecollections.com" target="_blank" rel="noopener" class="network-card">
+                <img src="assets/partnerlogos/Auberge-Collection-logo1_Main.webp" alt="Auberge Collection">
             </a>
-            <a class="network-card" href="https://mardi.ge/" target="_blank" rel="noopener noreferrer" aria-label="Visit Mardi">
-                <img src="assets/partnerlogos/mardi%20h.png" alt="Mardi logo">
+            <a href="https://www.phimpact.com" target="_blank" rel="noopener" class="network-card">
+                <img src="assets/PH_Impact_Investments_Logo.png" alt="PH Impact Investments">
             </a>
-            <a class="network-card" href="https://lareservatulum.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit La Reserva Tulum">
-                <img src="assets/partnerlogos/reservatulum.jpg" alt="La Reserva Tulum logo">
+            <a href="https://www.unep.org" target="_blank" rel="noopener" class="network-card">
+                <img src="assets/UNEP-logo.png" alt="United Nations Environment Programme">
             </a>
-            <a class="network-card" href="https://go.tradewithsequence.com/AS" target="_blank" rel="noopener noreferrer" aria-label="Visit Sequence">
-                <img src="assets/partnerlogos/sequence_edited.jpg" alt="Sequence logo">
-            </a>
-            <a class="network-card" href="https://sanarahotels.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Sanarà">
-                <img src="assets/partnerlogos/Sanara_type_BL2.png" alt="Sanarà logo">
-            </a>
-            <a class="network-card" href="https://lightspace.earth/" target="_blank" rel="noopener noreferrer" aria-label="Visit Lightspace">
-                <img src="assets/partnerlogos/Lightspace-logo.jpeg" alt="Lightspace logo">
-            </a>
-            <a class="network-card" href="https://www.emeraldpinecapital.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Emerald Pine Capital">
-                <img src="assets/partnerlogos/Emerald%20Pine%20Logo.jpeg" alt="Emerald Pine Capital logo">
-            </a>
-            <a class="network-card" href="https://rizeetf.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Rize ETF">
-                <img src="assets/partnerlogos/rize-etf-black.png" alt="Rize ETF logo">
-            </a>
-            <a class="network-card" href="https://www.copperman.com/en" target="_blank" rel="noopener noreferrer" aria-label="Visit Copperman">
-                <img src="assets/partnerlogos/copperman.jpg" alt="Copperman logo">
-            </a>
-            <a class="network-card" href="https://dataprana.io/" target="_blank" rel="noopener noreferrer" aria-label="Visit Dataprana">
-                <img src="assets/partnerlogos/Dataprana%20logo.jpeg" alt="Dataprana logo">
-            </a>
-            <a class="network-card" href="https://charliestuartgay.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Charlie Stuart Gay">
-                <img src="assets/partnerlogos/charlieparliament.png" alt="Charlie Stuart Gay logo">
-            </a>
-            <a class="network-card" href="https://phimpactinvestments.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit PH Impact Investments">
-                <img src="assets/partnerlogos/logophiimpact.png" alt="PH Impact Investments logo">
-            </a>
-            <a class="network-card" href="https://www.linkedin.com/company/wolves-development-group/about/" target="_blank" rel="noopener noreferrer" aria-label="Visit Wolves Development Group">
-                <img src="assets/partnerlogos/wolves_development_group_cover.png" alt="Wolves Development Group logo">
-            </a>
-            <a class="network-card" href="https://auberge.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Auberge Collection">
-                <img src="assets/partnerlogos/Auberge-Collection-logo1_Main.png" alt="Auberge Collection logo">
-            </a>
-            <a class="network-card" href="https://inmoandinvestment.com/en/team" target="_blank" rel="noopener noreferrer" aria-label="Visit In&amp;I">
-                <img src="assets/partnerlogos/IandI%20Eladia%20logo-web.png" alt="In&amp;I logo">
-            </a>
-            <a class="network-card" href="https://vestigecollection.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Vestige Collection">
-                <img src="assets/partnerlogos/VESTIGE%20COLLECTION%20%281%29.jpeg" alt="Vestige Collection logo">
-            </a>
-            <a class="network-card" href="https://zamaniislands.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Zamani Islands">
-                <img src="assets/partnerlogos/logo%20zamani%20islands%20%281%29.jpeg" alt="Zamani Islands logo">
-            </a>
-            <a class="network-card" href="https://park49.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Park 49">
-                <img src="assets/partnerlogos/P49-Lite-Red.001.png" alt="Park 49 logo">
-            </a>
-            <a class="network-card" href="https://www.vsv-asg.ch/en/" target="_blank" rel="noopener noreferrer" aria-label="Visit APW">
-                <img src="assets/partnerlogos/logoapw.png" alt="APW logo">
-            </a>
-            <a class="network-card" href="https://innovationsoftheworld.com/logos-capital/" target="_blank" rel="noopener noreferrer" aria-label="Visit Logos Capital">
-                <img src="assets/partnerlogos/logos.png" alt="Logos Capital logo">
-            </a>
-        </div>
-    </section>
-
-    <!-- Logo Video / Brand Animation (above footer) -->
-    <section style="padding: 60px 60px; text-align: center; background: #f39c12;">
-        <h3 style="margin-bottom: 20px; color: var(--primary-green);"></h3>
-
-         <a class="tflogo2link" href="who-we-work-with.html" target="_self" aria-label="Terra Firma Global Work">
-        <video autoplay muted loop playsinline style="max-width: 100%; max-height: 400px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
-            <source src="assets/tfinteractivelogo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>   
-        </a>
-    </section>
-
-    <!-- Vesperstone Vision Section with Video Background -->
-    <section style="position: relative; padding: 120px 60px; min-height: 700px; display: flex; align-items: center; text-align: center; overflow: hidden;">
-        
-        <!-- Background Video -->
-        <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 1;">
-            <source src="assets/waterfallc.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        
-        <!-- Dark Overlay for Readability -->
-        <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(15, 40, 24, 0.65); z-index: 2;"></div>
-        
-        <!-- Content -->
-        <div class="mobile-center-text" style="position: relative; z-index: 3; max-width: 1000px; margin: 0 auto; color: white;">
-            <h2 style="font-size: 3.2rem; margin-bottom: 30px;"></h2>
-            <p style="font-size: 1.25rem; max-width: 800px; margin: 0 auto 60px; line-height: 1.7;">
-                We are building the next generation of regenerative communities — places where capital, nature, and human flourishing converge.
-            </p>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
-                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 0;">
-                    <h3>Regenerative Development</h3>
-                    <p>Creating communities that restore ecosystems while delivering strong financial returns and nature-positive design.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 0;">
-                    <h3>Impact Capital</h3>
-                    <p>Connecting visionary family offices and institutional capital with projects that deliver measurable environmental and social returns.</p>
-                </div>
-                <div style="background: rgba(255,255,255,0.1); padding: 40px; border-radius: 0;">
-                    <h3>Sustainable Hospitality</h3>
-                    <p>Luxury eco-resorts and wellness communities that blend regenerative practices with exceptional guest experiences.</p>
-                </div>
-            </div>
-            
-            <a href="https://www.triibe.org/" 
-               target="_blank" 
-               style="display: inline-block; padding: 18px 48px; background: #d4af37; color: #1b4332; text-decoration: none; font-weight: 600; border-radius: 0;">
-                Visit TRIIBE Next-Gen Philanthropic Capital partner site →
+            <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener" class="network-card">
+                <img src="assets/SDG_Goals_Logo.png" alt="UN Sustainable Development Goals">
             </a>
         </div>
     </section>
 
     <!-- Ethos Section -->
-    <section class="ethos-section" id="ethos">
+    <section class="ethos-section">
         <div class="ethos-header">
-            <h2>OUR ETHOS</h2>
+            <h2 style="color: #7f96bd;">Our Ethos and Commitment</h2>
         </div>
         <div class="ethos-layout">
             <div class="ethos-col">
-                <p>In our infrastructure projects, we pioneer sustainable and innovative solutions for urban development globally.</p>
-                <p>From emerging markets to mature economies, we focus on environmentally conscious design and cutting-edge technology.</p>
-                <p>Our initiatives aim to leave a lasting positive impact, harmonizing human needs with ecological responsibility for a future-forward approach to infrastructure development.</p>
-                <p>Our financial collaborations curate partners with classical and avant-garde approaches, showcasing brilliance in Commercial Litigation, depth in Private Equity, and innovation in startups globally.</p>
-                <p>We believe architecture is one of the key pillars of society for humans to be able to thrive.</p>
-                <p>A world where all people can prosper is possible if we design accommodation intelligently.</p>
-
-                <div class="ethos-sdg-gallery">
-                    <a class="ethos-sdg-card logo-card" href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer" aria-label="Learn more about the UN Sustainable Development Goals">
-                        <img src="assets/E_SDG_logo_UN.jpg" alt="United Nations Sustainable Development Goals logo">
-                    </a>
-                    <a class="ethos-sdg-card" href="https://sdgs.un.org/goals" target="_blank" rel="noopener noreferrer" aria-label="Learn more about the UN Sustainable Development Goals">
-                        <img src="assets/sdgsUN.png" alt="United Nations Sustainable Development Goals icons">
-                    </a>
+                <h3>Building Value Through Integrity</h3>
+                <div class="ethos-list">
+                    <div class="ethos-card">
+                        <h4>Impact & Excellence</h4>
+                        <p>We are committed to identifying and supporting projects that deliver both measurable environmental and social returns alongside competitive financial performance. Excellence in execution is non-negotiable.</p>
+                    </div>
+                    <div class="ethos-card">
+                        <h4>Long-Term Partnerships</h4>
+                        <p>We believe in building enduring relationships with founders and capital partners. Our success is defined by your success, and we align ourselves fully with your strategic vision.</p>
+                    </div>
+                    <div class="ethos-card">
+                        <h4>Transparency & Accountability</h4>
+                        <p>We operate with full transparency in all dealings and hold ourselves to the highest standards of professional accountability and ethical conduct.</p>
+                    </div>
+                    <div class="ethos-card">
+                        <h4>Continuous Learning</h4>
+                        <p>The regenerative economy is evolving rapidly. We stay at the forefront of market developments, regulatory changes, and emerging opportunities to provide our partners with cutting-edge insights.</p>
+                    </div>
                 </div>
             </div>
             <div class="ethos-col">
-                <h3>Our Current Portfolio</h3>
-                <div class="ethos-list">
-                    <div class="ethos-card">
-                        <p>We take preference to regenerative eco and luxury real estate projects.</p>
-                    </div>
-                    <div class="ethos-card">
-                        <p>Commercial, residential, hotels, eco-resorts.</p>
-                    </div>
-                    <div class="ethos-card">
-                        <p>Having represented projects in Europe, Georgia and Mexico we are currently venturing into UK/USA markets and beyond.</p>
-                    </div>
-                    <div class="ethos-card">
-                        <p>Social housing, alternative projects and industries also considered. We are familiar with many countries and regions around the world and will be gradually including them.</p>
-                    </div>
-                    <div class="ethos-card">
-                        <p>Crypto related endeavors also welcome.</p>
-                    </div>
-                    <div class="ethos-card">
-                        <p>Optimal deal sizes $10m USD to $100m USD. Structured leveraged deals. Capacity up to 1bn$/2bn$ deals. </p>
-                    </div>
+                <h3>Aligned with Global Goals</h3>
+                <div class="ethos-sdg-gallery">
+                    <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener" class="ethos-sdg-card logo-card">
+                        <img src="assets/SDG_Goals_Logo.png" alt="UN Sustainable Development Goals">
+                    </a>
+                    <a href="https://www.unep.org" target="_blank" rel="noopener" class="ethos-sdg-card">
+                        <img src="assets/UNEP-logo.png" alt="UN Environment Programme">
+                    </a>
                 </div>
+                <p class="ethos-note" style="margin-top: 28px;">
+                    Our work directly supports the UN Sustainable Development Goals, particularly SDG 11 (Sustainable Cities & Communities) and SDG 13 (Climate Action). We are dedicated to advancing a more regenerative, equitable, and resilient world through strategic capital deployment and world-class real estate development.
+                </p>
             </div>
         </div>
     </section>
 
-    <section class="network-advantage-section" id="network-advantage">
+    <!-- Network Advantage Section -->
+    <section class="network-advantage-section">
         <div class="content">
-            <h2>Our Network Advantage</h2>
-            <p>Terra Firma Global’s competitive edge is access. Not generic “we know people” access — a dense, senior-level professional network built over two decades and continuously expanded across family offices, private markets, real-estate capital and institutional platforms.</p>
-            <p><span class="highlight">By the numbers (LinkedIn network analysis):</span></p>
-            <p>10,600+ professional connections</p>
-            <p>2,250+ connections in capital, funds, private equity, venture, investment and asset management</p>
-            <p>1,170+ connections focused on real estate, property, hospitality and related development</p>
-            <p>100+ family-office principals, advisors and related decision-makers</p>
-            <p>1,000+ senior decision-maker roles (Partners, Managing Directors, Principals, Founders, CEOs and CIOs) operating in relevant capital and real-estate sectors</p>
-            <p>Senior relationships extend into platforms and firms collectively associated with approximately $3 trillion in assets under management and advisory capital — including Hamilton Lane (Co-CEO level), Apollo Global Management, Blue Owl Capital, StepStone Group, Pantheon, Oaktree, Coller Capital, LGT Capital Partners, Rockefeller Capital and others.</p>
-            <p><span class="highlight">What this means for projects seeking capital</span></p>
-            <p>We sit between visionary regenerative real estate, sustainable hospitality and climate-aligned projects on one side, and the family offices, institutional LPs and private-markets partners actively looking to deploy capital on the other. Our network is not theoretical. It is populated with people who write cheques, allocate mandates and underwrite deals in the exact sectors we cover.</p>
-            <p>Whether you are raising for a regenerative community, a sustainable hospitality asset, mass-timber development, or climate-aligned infrastructure in the $10–100M+ range (with capacity for larger structured transactions), Terra Firma Global exists to open the right doors and structure the conversations that move capital.</p>
-            <p><strong>Capital meets regenerative ambition.</strong><br>Let’s build something that lasts.</p>
-            <a class="network-briefing-link" href="assets/Terra_Firma_Global_Network_Intelligence.pdf" download>Download more detailed Terra Firma Global Advisory Network Intelligence Briefing</a>
+            <h2>Why Our Network Matters</h2>
+            <p>In the regenerative real estate space, <span class="highlight">relationships and market knowledge are everything</span>. Our carefully curated network of institutional investors, family offices, developers, architects, and sustainability consultants provides unparalleled access to the capital, expertise, and partnerships needed to bring transformative projects to life.</p>
+            <p>Whether you're raising capital, seeking strategic advisory, or looking to accelerate deal flow, our network opens doors and creates opportunities that would take years to develop independently.</p>
+            <a href="https://bit.ly/TerraFirmaIntroDeck" target="_blank" rel="noopener" class="network-briefing-link">Explore Our Network →</a>
         </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact" class="contact-section">
-        <video autoplay muted loop playsinline class="contact-video">
-            <source src="assets/chiapaswaterfallriver.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="contact-overlay"></div>
-      <a class="meaningfullink" href="who-we-work-with.html" target="_self" aria-label="Let's Create Something Meaningful">
-        <h2>Let's Create Something Meaningful</h2> </a>
-        <a href="contact.html" class="cta-button">SEND US A MESSAGE</a>
-        <a href="https://www.linkedin.com/company/terra-firma-advisory-group/" target="_blank">
-            <h5>Terra Firma Global Advisory Ltd</h5>
-        </a>
-
-        <p style="font-style: italic; font-weight: 400; color: rgba(255,255,255,0.95);">
-167-169 Great Portland Street, London W1W5PF, United Kingdom <br>
-CERTIFICATE OF INCORPORATION OF A PRIVATE LIMITED COMPANY <br>
-Company Number: 15513200
-Companies House, Cardiff 2024 <br>
-The Registrar of Companies for England and Wales.
-        </p>
+    <!-- Contact CTA Section -->
+    <section class="contact-section">
+        <div style="position: relative; z-index: 3;">
+            <h2 style="color: white; margin-bottom: 20px;">Ready to Explore Opportunities?</h2>
+            <p style="font-size: 1.1rem; margin-bottom: 30px; color: rgba(255,255,255,0.95);">Let's discuss how Terra Firma Global can support your regenerative real estate goals.</p>
+            <a href="contact.html" class="cta-button">Get in Touch</a>
+            <h5>or</h5>
+            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.9);">Email us at <a href="mailto:contact@terrafirmaglobal.com">contact@terrafirmaglobal.com</a></p>
+        </div>
     </section>
 
-    <!-- Footer with Legal Links -->
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Terra Firma Global. All rights reserved. | Terra Firma Global Advisory Ltd</p>
         <div class="footer-legal">
@@ -1012,14 +750,5 @@ The Registrar of Companies for England and Wales.
             <a href="who-we-work-with.html">Who We Work With</a>
         </div>
     </footer>
-
-    <script>
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({ behavior: 'smooth' });
-            });
-        });
-    </script>
 </body>
 </html>
