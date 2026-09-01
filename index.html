@@ -100,501 +100,209 @@
             position: absolute; top: 0; left: 0;
             width: 100%; height: 100%;
             object-fit: cover;
-            z-index: 0;
-        }
-
-        .hero-overlay {
-            position: absolute; top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: radial-gradient(circle, rgba(15,40,24,0.4) 0%, rgba(15,40,24,0.7) 100%);
-            z-index: 1;
         }
 
         .hero-content {
-            position: relative; z-index: 2;
-            text-align: center; color: white;
-            max-width: 900px; padding: 60px;
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            color: white;
+            max-width: 900px;
+            padding: 0 40px;
         }
 
-       .hero-content h1 {
-           font-size: 4.5rem; font-weight: 300;
-           margin-bottom: 30px;
-       }
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 300;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.4);
+        }
 
-       .hero-content h1 a.beautifultitlelink,
-       .hero-content h1 a.beautifultitlelink:visited,
-       .hero-content h1 a.beautifultitlelink:hover,
-       .hero-content h1 a.beautifultitlelink:active,
-       .hero-content h1 a.beautifultitlelink:focus {
-           color: #ffffff !important;
-           text-decoration: none !important;
-           border-bottom: none !important;
-           -webkit-text-fill-color: #ffffff;
-       }
+        .hero p {
+            font-size: 1.25rem;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 40, 24, 0.45);
+            z-index: 5;
+        }
 
         .cta-button {
-            display: inline-block;
-            padding: 16px 40px; margin: 10px;
-            background: var(--warm-gold);
-            color: var(--primary-green);
+            background: var(--primary-green);
+            color: white;
+            padding: 16px 40px;
             text-decoration: none;
-            font-weight: 600;
-            border: 2px solid var(--warm-gold);
             border-radius: 0;
+            font-weight: 600;
             transition: all 0.3s;
+            display: inline-block;
+            margin: 0 10px;
         }
 
         .cta-button:hover {
-            background: transparent;
-            color: var(--warm-gold);
+            background: var(--secondary-green);
+            transform: translateY(-2px);
         }
 
-        /* Sections */
-        section { padding: 100px 60px; max-width: 1400px; margin: 0 auto; }
-        h2 { font-size: 3rem; font-weight: 300; color: var(--primary-green); margin-bottom: 20px; }
-        .section-subtitle { font-size: 1.2rem; color: #666; margin-bottom: 60px; max-width: 600px; }
+        /* Content Sections */
+        .section {
+            padding: 80px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
 
-        .cards-grid {
+        h2 { font-size: 2.8rem; color: var(--primary-green); margin-bottom: 40px; font-weight: 300; }
+        h3 { font-size: 1.4rem; color: var(--primary-green); margin: 30px 0 15px; font-weight: 600; }
+
+        .investment-themes {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 40px;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
         }
 
         .card {
-            background: white;
-            border-radius: 0;
+            background: #f9f9f9;
+            border-radius: 8px;
             overflow: hidden;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-        }
-
-        .card:hover { transform: translateY(-8px); }
-
-        .card-image {
-            display: block;
-            width: 100%;
-            aspect-ratio: 1 / 1;
-            object-fit: cover;
-        }
-
-        .card-image-wrapper {
-            display: block;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .card-image-title {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin: 0;
-            padding: 24px 28px;
-            color: #fff;
-            font-size: 2.6rem;
-            font-weight: 300;
-            line-height: 1.15;
-            background: linear-gradient(to top, rgba(0,0,0,0.72) 0%, rgba(0,0,0,0.18) 60%, transparent 100%);
-            text-shadow: 0 2px 8px rgba(0,0,0,0.45);
-        }
-
-        .card-content { padding: 35px; }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 35px;
-        }
-
-        .service-card {
-            padding: 40px;
-            background: linear-gradient(135deg, var(--cream), white);
-            border-left: 4px solid var(--warm-gold);
-            border-radius: 0;
-        }
-
-        #services {
-            position: relative;
-            background-color: var(--secondary-green);
-            overflow: hidden;
-        }
-
-        .services-video {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-
-        .services-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(15, 40, 24, 0.55);
-            z-index: 1;
-        }
-
-        .services-content {
-            position: relative;
-            z-index: 2;
-        }
-
-        #services h2 {
-            color: white;
-        }
-
-        #services .section-subtitle {
-            color: rgba(255,255,255,0.9);
-        }
-
-        #network {
-            background: linear-gradient(180deg, #ffffff 0%, var(--cream) 100%);
-            border-top: 1px solid rgba(27,67,50,0.08);
-            border-bottom: 1px solid rgba(27,67,50,0.08);
-        }
-
-        .network-subtitle {
-            max-width: 760px;
-        }
-
-        .network-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-            gap: 24px;
-        }
-
-        .network-card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 150px;
-            padding: 24px;
-            background: rgba(255,255,255,0.95);
-            border: 1px solid rgba(45,106,79,0.12);
-            box-shadow: 0 8px 24px rgba(27,67,50,0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .network-card:hover {
-            transform: translateY(-6px);
-            border-color: rgba(212,175,55,0.45);
-            box-shadow: 0 16px 32px rgba(27,67,50,0.12);
-        }
-
-        .network-card img {
-            max-width: 100%;
-            max-height: 72px;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-            filter: saturate(0.98);
-        }
-
-        .contact-section {
-            background: #1a472e;
-            color: white;
-            text-align: center;
-            padding: 100px 60px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .contact-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-        }
-
-        .contact-overlay {
-            position: absolute;
-            inset: 0;
-            background: rgba(15, 40, 24, 0.6);
-            z-index: 1;
-        }
-
-        .contact-section::before {
-            content: "";
-            position: absolute;
-            top: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 2px;
-            background: var(--warm-gold);
-            opacity: 0.6;
-            z-index: 2;
-        }
-
-        .contact-section::after {
-            content: "";
-            position: absolute;
-            bottom: 30px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 120px;
-            height: 2px;
-            background: var(--warm-gold);
-            opacity: 0.6;
-            z-index: 2;
-        }
-
-        .contact-section h2 {
-            color: white;
-            position: relative;
-            z-index: 3;
-        }
-
-        .contact-section a {
-            color: var(--warm-gold);
-            text-decoration: none;
-            font-weight: 500;
-        }
-
-        .contact-section .cta-button {
-            position: relative;
-            z-index: 3;
-            margin: 30px auto 20px;
-            display: inline-block;
-            color: var(--primary-green);
-        }
-
-        .contact-section h5 {
-            position: relative;
-            z-index: 3;
-            margin-top: 40px;
-            margin-bottom: 40px;
-            font-weight: 400;
-        }
-
-        .contact-section p {
-            position: relative;
-            z-index: 3;
-        }
-
-        .ethos-section {
-            background: #ffffff;
-            padding: 120px 60px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .ethos-header {
-            text-align: center;
-            margin-bottom: 70px;
-        }
-
-        .ethos-header h2 {
-            color: #7f96bd;
-            font-size: 2.6rem;
-            letter-spacing: 0.04em;
-            margin-bottom: 18px;
-        }
-
-        .ethos-layout {
-            display: grid;
-            grid-template-columns: minmax(0, 1.7fr) minmax(300px, 0.9fr);
-            gap: 80px;
-            align-items: start;
-        }
-
-        .ethos-col p {
-            font-size: 1.15rem;
-            line-height: 1.7;
-            color: #111;
-            margin-bottom: 34px;
-            max-width: 100%;
-        }
-
-        .ethos-sdg-gallery {
-            display: grid;
-            gap: 24px;
-            margin-top: 36px;
-        }
-
-        .ethos-sdg-card {
-            background: #ffffff;
-            border: 1px solid rgba(127, 150, 189, 0.2);
-            box-shadow: 0 10px 30px rgba(27,67,50,0.08);
-            padding: 20px;
-            display: block;
-            text-decoration: none;
-        }
-
-        .ethos-sdg-card img {
-            display: block;
-            width: 100%;
-            height: auto;
-            object-fit: contain;
-        }
-
-        .ethos-sdg-card.logo-card img {
-            max-width: 520px;
-            margin: 0 auto;
-        }
-
-        .ethos-col h3 {
-            font-size: 2rem;
-            font-weight: 500;
-            color: var(--primary-green);
-            margin-bottom: 28px;
-        }
-
-        .ethos-card {
-            margin-bottom: 34px;
-        }
-
-        .ethos-card h4 {
-            font-size: 1.35rem;
-            font-weight: 600;
-            color: #111;
-            margin-bottom: 14px;
-        }
-
-        .ethos-card p {
-            margin-bottom: 0;
-        }
-
-        .ethos-list {
-            display: grid;
-            gap: 26px;
-        }
-
-        .ethos-note {
-            font-size: 1.08rem;
-            line-height: 1.65;
-            color: #111;
-        }
-
-        .network-advantage-section {
-            background: linear-gradient(180deg, #ffffff 0%, #f8fbf8 100%);
-            border-top: 1px solid rgba(27,67,50,0.08);
-            border-bottom: 1px solid rgba(27,67,50,0.08);
-            padding: 110px 60px;
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-
-        .network-advantage-section .content {
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .network-advantage-section h2 {
-            color: var(--primary-green);
-            font-size: 2.6rem;
-            margin-bottom: 24px;
-        }
-
-        .network-advantage-section p {
-            font-size: 1.08rem;
-            line-height: 1.8;
-            color: #222;
-            margin-bottom: 22px;
-        }
-
-        .network-advantage-section .highlight {
-            font-weight: 700;
-            color: var(--primary-green);
-        }
-
-        .network-briefing-link {
-            display: inline-block;
-            margin-top: 26px;
-            padding: 16px 28px;
-            background: var(--primary-green);
-            color: #fff;
-            text-decoration: none;
-            font-weight: 600;
-            border: 2px solid var(--primary-green);
             transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
         }
 
-        .network-briefing-link:hover {
-            background: transparent;
-            color: var(--primary-green);
+        .card:hover {
+            box-shadow: 0 8px 20px rgba(27, 67, 50, 0.12);
+            transform: translateY(-4px);
         }
+
+        .card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 12px;
+        }
+
+        .card p {
+            color: #666;
+            font-size: 0.95rem;
+            flex-grow: 1;
+        }
+
+        .card a {
+            color: var(--primary-green);
+            text-decoration: none;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: color 0.3s;
+        }
+
+        .card a:hover { color: var(--light-green); }
+
+        .partner-logos {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 30px;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .partner-logos img {
+            max-height: 60px;
+            width: auto;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .partner-logos img:hover { opacity: 1; }
 
         /* Footer */
         footer {
             background: var(--primary-green);
             color: white;
-            padding: 40px 60px;
+            padding: 60px;
             text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        footer p { margin: 0; color: rgba(255,255,255,0.85); }
+        footer a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            margin: 0 15px;
+        }
 
-        footer a { color: var(--warm-gold); text-decoration: none; }
-        footer a:hover { opacity: 0.8; }
+        footer a:hover { text-decoration: underline; }
 
         .footer-legal {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
             margin-top: 20px;
-            flex-wrap: wrap;
+            font-size: 0.9rem;
+            opacity: 0.8;
         }
 
-        .footer-legal a { font-size: 0.85rem; }
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav { padding: 15px 20px; }
+            nav ul { gap: 20px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .section { padding: 40px 20px; }
+            h2 { font-size: 2rem; }
+            .partner-logos { grid-template-columns: repeat(2, 1fr); }
+        }
+
+        .two-col-mobile {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 80px;
+            align-items: center;
+            padding: 100px 60px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
 
         @media (max-width: 768px) {
-            nav {
-                padding: 15px 20px;
-            }
-
-            section {
-                padding: 60px 20px;
-            }
-
-            h2 {
-                font-size: 2rem;
-            }
-
-            .hero-content h1 {
-                font-size: 2.5rem;
-            }
-
             .two-col-mobile {
-                grid-template-columns: 1fr !important;
-                gap: 40px !important;
-            }
-
-            .ethos-layout {
-                grid-template-columns: 1fr !important;
+                grid-template-columns: 1fr;
+                gap: 40px;
+                padding: 60px 20px;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav>
-        <img src="assets/logo.png" alt="Terra Firma Global Logo" class="logo-img">
+        <img src="assets/logo.png" alt="Terra Firma Global" class="logo-img">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#network">Network</a></li>
+            <li><a href="#themes">Investment Themes</a></li>
+            <li><a href="#partners">Partners</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
-        <video class="hero-video" autoplay muted loop playsinline>
-            <source src="assets/hero_video.mp4" type="video/mp4">
+    <section class="hero">
+        <video autoplay muted loop class="hero-video">
+            <source src="assets/hero-video.mp4" type="video/mp4">
         </video>
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1><a href="who-we-work-with.html" class="beautifultitlelink">Connecting Capital with Regenerative Real Estate</a></h1>
-            <p style="font-size: 1.3rem; margin-bottom: 30px; color: rgba(255,255,255,0.95);">Strategic partnership & fundraising advisory for impact-driven development worldwide</p>
-            <a href="contact.html" class="cta-button">Get in Touch</a>
+            <h1>Terra Firma Global</h1>
+            <p>Regenerative Real Estate & Impact Investing</p>
+            <a href="#themes" class="cta-button">Explore Opportunities</a>
         </div>
     </section>
 
@@ -615,22 +323,22 @@
             
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Capital Raising & Investment</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Access to institutional capital pools, family offices, and impact-aligned investors ready to deploy $500M+ in regenerative real estate, sustainable hospitality, and climate-aligned infrastructure projects. We provide pathways to the capital that moves markets.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Access to institutional capital pools, family offices, and impact-aligned investors ready to deploy $500M+ in regenerative and sustainable real estate projects. We connect visionary founders and developers with decision-makers who understand the dual-bottom-line opportunity.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Direct Access to Deal Flow</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Exclusive pipeline of vetted regenerative real estate, sustainable hospitality, mass timber, and climate-tech opportunities. Our network continuously sources high-quality projects aligned with impact and return profiles.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Exclusive pipeline of vetted regenerative real estate, sustainable hospitality, mass timber, and climate-tech opportunities across global markets. Our sourcing covers emerging markets, mature economies, and transformative projects at various stages from concept to stabilized operations.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Strategic Partnerships</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Network with leading developers, architects, and sustainability consultants to accelerate project development and ensure world-class execution. We facilitate collaborations that strengthen every aspect of your initiative.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Network with leading developers, architects, and sustainability consultants to accelerate project development and ensure alignment with regenerative principles. Our partner ecosystem spans real estate operators, infrastructure specialists, climate finance experts, and impact measurement firms.</p>
             </div>
 
             <div>
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Impact & Returns</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental & social returns alongside competitive financial performance. We partner on ventures built for lasting impact and sustainable value creation.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Dual-bottom-line investments delivering measurable environmental & social returns alongside competitive financial performance. Our thesis centers on projects that regenerate ecosystems, strengthen communities, and generate long-term value creation aligned with climate and sustainability goals.</p>
             </div>
         </div>
 
@@ -640,129 +348,69 @@
             
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">What We Do</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">We bridge the gap between visionary founders and institutional capital. Terra Firma Global identifies, develops, and structures transformative real estate and infrastructure opportunities, connecting them with aligned capital partners and strategic expertise to drive scalable, regenerative development worldwide.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">We bridge the gap between visionary founders and institutional capital. Terra Firma Global identifies, develops, and facilitates transformative real estate and infrastructure projects that integrate regenerative and sustainable practices. Our advisory and fundraising services help founders, operators, and sponsors access capital, strategic expertise, and market insights to scale impact-driven businesses.</p>
             </div>
 
             <div style="margin-bottom: 40px;">
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">Our Thesis</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Regenerative real estate and sustainable hospitality represent the next frontier in global capital deployment. Institutional investors and family offices are actively seeking differentiated, long-term opportunities that deliver both measurable impact and competitive returns in this emerging asset class.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Real estate and infrastructure represent the largest asset classes globally and are fundamental to climate solutions, community resilience, and biodiversity restoration. We believe regenerative development models—integrating ecological restoration, social equity, and financial returns—are becoming the baseline for institutional capital allocation. Founders and operators who embed regenerative principles into their business models unlock differentiated market positioning, attract mission-aligned capital, and create measurable impact alongside superior risk-adjusted returns.</p>
             </div>
 
             <div>
                 <h3 style="font-size: 1.4rem; color: var(--primary-green); margin-bottom: 15px; font-weight: 600;">How We Help</h3>
-                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Through consulting, advisory services, and structured fundraising support, we help entrepreneurs navigate market entry, build compelling investment narratives, optimize capital structures, and accelerate deal flow to the institutions most likely to partner with you.</p>
+                <p style="font-size: 1.05rem; line-height: 1.8; color: #333;">Through capital introductions, financial structuring, business planning, and advisory services, we help founders and operators navigate fundraising, market entry, and growth. We work across transaction facilitation, direct investment advisory, and strategic consulting to connect visionary capital with transformative real estate, sustainable hospitality, mass timber, and climate-aligned infrastructure projects.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <div class="services-content">
-            <h2 style="color: white;">Our Services</h2>
-            <p class="section-subtitle" style="color: rgba(255,255,255,0.9);">Comprehensive support for founders and entrepreneurs in regenerative real estate and impact investing</p>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3 style="color: var(--primary-green); font-size: 1.3rem; margin-bottom: 12px;">Fundraising Advisory</h3>
-                    <p style="color: #333; line-height: 1.7;">Strategic guidance on capital structure, investment thesis development, and investor targeting to accelerate your path to funding.</p>
+    <!-- Investment Themes -->
+    <section id="themes" class="section">
+        <h2>Investment Themes</h2>
+        <div class="investment-themes">
+            <div class="card">
+                <img src="assets/theme-regenerative-real-estate.jpg" alt="Regenerative Real Estate">
+                <div class="card-content">
+                    <h3>Regenerative Real Estate</h3>
+                    <p>Mixed-use developments, residential, and commercial projects integrating ecological restoration, community health, and long-term value creation.</p>
+                    <a href="#">Learn More →</a>
                 </div>
-                <div class="service-card">
-                    <h3 style="color: var(--primary-green); font-size: 1.3rem; margin-bottom: 12px;">Investor Relations</h3>
-                    <p style="color: #333; line-height: 1.7;">Direct access to curated networks of institutional investors, family offices, and impact-aligned capital partners actively deploying in your sector.</p>
+            </div>
+            <div class="card">
+                <img src="assets/theme-sustainable-hospitality.jpg" alt="Sustainable Hospitality">
+                <div class="card-content">
+                    <h3>Sustainable Hospitality</h3>
+                    <p>Boutique hotels, resorts, and experiential destinations designed with environmental stewardship and community benefit at the core.</p>
+                    <a href="#">Learn More →</a>
                 </div>
-                <div class="service-card">
-                    <h3 style="color: var(--primary-green); font-size: 1.3rem; margin-bottom: 12px;">Market & Strategic Advisory</h3>
-                    <p style="color: #333; line-height: 1.7;">Expert analysis on market dynamics, competitive positioning, and strategic entry strategies to strengthen your competitive advantage.</p>
+            </div>
+            <div class="card">
+                <img src="assets/theme-mass-timber.jpg" alt="Mass Timber & CLT">
+                <div class="card-content">
+                    <h3>Mass Timber & CLT</h3>
+                    <p>Cross-laminated timber (CLT) and mass timber construction projects advancing circular economy principles and carbon sequestration.</p>
+                    <a href="#">Learn More →</a>
                 </div>
-                <div class="service-card">
-                    <h3 style="color: var(--primary-green); font-size: 1.3rem; margin-bottom: 12px;">Deal Structuring & Facilitation</h3>
-                    <p style="color: #333; line-height: 1.7;">Support in defining transaction structures and facilitating introductions between complementary parties to accelerate deal velocity.</p>
+            </div>
+            <div class="card">
+                <img src="assets/theme-climate-tech.jpg" alt="Climate & Clean Tech Infrastructure">
+                <div class="card-content">
+                    <h3>Climate & Clean Tech Infrastructure</h3>
+                    <p>Renewable energy, water systems, and resilience infrastructure integrated into real estate and community development initiatives.</p>
+                    <a href="#">Learn More →</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Network Section -->
-    <section id="network">
-        <h2>Our Network & Partnerships</h2>
-        <p class="network-subtitle">We partner with leading organizations shaping the future of regenerative real estate and sustainable development</p>
-        <div class="network-grid">
-            <a href="https://www.aubergecollections.com" target="_blank" rel="noopener" class="network-card">
-                <img src="assets/partnerlogos/Auberge-Collection-logo1_Main.webp" alt="Auberge Collection">
-            </a>
-            <a href="https://www.phimpact.com" target="_blank" rel="noopener" class="network-card">
-                <img src="assets/PH_Impact_Investments_Logo.png" alt="PH Impact Investments">
-            </a>
-            <a href="https://www.unep.org" target="_blank" rel="noopener" class="network-card">
-                <img src="assets/UNEP-logo.png" alt="United Nations Environment Programme">
-            </a>
-            <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener" class="network-card">
-                <img src="assets/SDG_Goals_Logo.png" alt="UN Sustainable Development Goals">
-            </a>
-        </div>
-    </section>
-
-    <!-- Ethos Section -->
-    <section class="ethos-section">
-        <div class="ethos-header">
-            <h2 style="color: #7f96bd;">Our Ethos and Commitment</h2>
-        </div>
-        <div class="ethos-layout">
-            <div class="ethos-col">
-                <h3>Building Value Through Integrity</h3>
-                <div class="ethos-list">
-                    <div class="ethos-card">
-                        <h4>Impact & Excellence</h4>
-                        <p>We are committed to identifying and supporting projects that deliver both measurable environmental and social returns alongside competitive financial performance. Excellence in execution is non-negotiable.</p>
-                    </div>
-                    <div class="ethos-card">
-                        <h4>Long-Term Partnerships</h4>
-                        <p>We believe in building enduring relationships with founders and capital partners. Our success is defined by your success, and we align ourselves fully with your strategic vision.</p>
-                    </div>
-                    <div class="ethos-card">
-                        <h4>Transparency & Accountability</h4>
-                        <p>We operate with full transparency in all dealings and hold ourselves to the highest standards of professional accountability and ethical conduct.</p>
-                    </div>
-                    <div class="ethos-card">
-                        <h4>Continuous Learning</h4>
-                        <p>The regenerative economy is evolving rapidly. We stay at the forefront of market developments, regulatory changes, and emerging opportunities to provide our partners with cutting-edge insights.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="ethos-col">
-                <h3>Aligned with Global Goals</h3>
-                <div class="ethos-sdg-gallery">
-                    <a href="https://www.un.org/sustainabledevelopment/" target="_blank" rel="noopener" class="ethos-sdg-card logo-card">
-                        <img src="assets/SDG_Goals_Logo.png" alt="UN Sustainable Development Goals">
-                    </a>
-                    <a href="https://www.unep.org" target="_blank" rel="noopener" class="ethos-sdg-card">
-                        <img src="assets/UNEP-logo.png" alt="UN Environment Programme">
-                    </a>
-                </div>
-                <p class="ethos-note" style="margin-top: 28px;">
-                    Our work directly supports the UN Sustainable Development Goals, particularly SDG 11 (Sustainable Cities & Communities) and SDG 13 (Climate Action). We are dedicated to advancing a more regenerative, equitable, and resilient world through strategic capital deployment and world-class real estate development.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Network Advantage Section -->
-    <section class="network-advantage-section">
-        <div class="content">
-            <h2>Why Our Network Matters</h2>
-            <p>In the regenerative real estate space, <span class="highlight">relationships and market knowledge are everything</span>. Our carefully curated network of institutional investors, family offices, developers, architects, and sustainability consultants provides unparalleled access to the capital, expertise, and partnerships needed to bring transformative projects to life.</p>
-            <p>Whether you're raising capital, seeking strategic advisory, or looking to accelerate deal flow, our network opens doors and creates opportunities that would take years to develop independently.</p>
-            <a href="https://bit.ly/TerraFirmaIntroDeck" target="_blank" rel="noopener" class="network-briefing-link">Explore Our Network →</a>
-        </div>
-    </section>
-
-    <!-- Contact CTA Section -->
-    <section class="contact-section">
-        <div style="position: relative; z-index: 3;">
-            <h2 style="color: white; margin-bottom: 20px;">Ready to Explore Opportunities?</h2>
-            <p style="font-size: 1.1rem; margin-bottom: 30px; color: rgba(255,255,255,0.95);">Let's discuss how Terra Firma Global can support your regenerative real estate goals.</p>
-            <a href="contact.html" class="cta-button">Get in Touch</a>
-            <h5>or</h5>
-            <p style="font-size: 0.95rem; color: rgba(255,255,255,0.9);">Email us at <a href="mailto:contact@terrafirmaglobal.com">contact@terrafirmaglobal.com</a></p>
+    <!-- Partners Section -->
+    <section id="partners" class="section" style="background: linear-gradient(135deg, var(--cream) 0%, rgba(64, 145, 108, 0.05) 100%); border-radius: 0;">
+        <h2>Strategic Partners & Advisors</h2>
+        <p style="font-size: 1.05rem; color: #666; margin-bottom: 40px;">We collaborate with leading firms and experts in regenerative real estate, impact investing, sustainability, and international finance.</p>
+        <div class="partner-logos">
+            <img src="assets/partnerlogos/partner-1.png" alt="Partner 1">
+            <img src="assets/partnerlogos/partner-2.png" alt="Partner 2">
+            <img src="assets/partnerlogos/partner-3.png" alt="Partner 3">
+            <img src="assets/partnerlogos/partner-4.png" alt="Partner 4">
         </div>
     </section>
 
@@ -770,11 +418,9 @@
     <footer>
         <p>&copy; 2026 Terra Firma Global. All rights reserved. | Terra Firma Global Advisory Ltd</p>
         <div class="footer-legal">
-            <a href="terms.html">Terms of Service</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a> |
+            <a href="privacy.html">Privacy Policy</a> |
             <a href="disclaimers.html">Disclaimers</a>
-            <a href="market-insights.html">Market Insights</a>
-            <a href="who-we-work-with.html">Who We Work With</a>
         </div>
     </footer>
 </body>

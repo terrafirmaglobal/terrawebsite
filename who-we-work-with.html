@@ -96,106 +96,86 @@
             font-weight: 300;
         }
 
+        p {
+            color: #555;
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 20px;
+        }
+
         h2 {
             color: var(--primary-green);
-            font-size: 1.6rem;
-            margin: 40px 0 20px 0;
+            font-size: 1.8rem;
+            margin-top: 40px;
+            margin-bottom: 20px;
             font-weight: 600;
         }
 
-        p {
-            color: #555;
-            margin-bottom: 15px;
-            line-height: 1.8;
+        .who-we-work-with {
+            display: flex;
+            flex-direction: column;
         }
 
-        .intro {
-            margin-bottom: 35px;
-        }
-
-        .content-block {
-            background: rgba(255, 255, 255, 0.78);
-            border: 1px solid rgba(27, 67, 50, 0.1);
-            border-radius: 12px;
-            padding: 22px;
-        }
-
-        /* Top Video */
         .top-video-wrap {
-            width: 100%;
-            max-width: none;
-            margin: 0 0 40px;
+            margin-bottom: 60px;
             border-radius: 0;
-            overflow: hidden;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-            background: #0f2818;
         }
 
         .top-video {
-            display: block;
             width: 100%;
             height: auto;
-            max-height: 480px;
+            max-height: 500px;
             object-fit: cover;
             border-radius: 0;
+            display: block;
         }
 
-        /* Banner links (Introduction Deck + Advisory Fees) */
         .banner-links {
             display: flex;
-            gap: 24px;
-            justify-content: center;
-            align-items: center;
-            margin: 22px 0 28px;
+            gap: 20px;
+            margin: 40px 0;
             flex-wrap: wrap;
         }
 
         .banner-links a {
-            display: block;
-            flex: 1 1 420px;
-            max-width: 520px;
-            text-align: center;
+            flex: 1;
+            min-width: 250px;
+            text-decoration: none;
+            transition: transform 0.3s ease;
+        }
+
+        .banner-links a:hover {
+            transform: scale(1.02);
         }
 
         .banner-img {
             width: 100%;
             height: auto;
             display: block;
-            border-radius: 8px;
-            box-shadow: 0 12px 30px rgba(0,0,0,0.15);
-            border: 1px solid rgba(0,0,0,0.06);
+            border-radius: 4px;
         }
 
         footer {
-            background: var(--dark-bg);
+            background: var(--primary-green);
             color: white;
             padding: 40px 60px;
             text-align: center;
-            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            margin-top: 60px;
         }
 
-        footer p {
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.9rem;
-            margin-bottom: 15px;
+        footer a {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
         }
 
         .footer-legal {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .footer-legal a {
-            color: var(--warm-gold);
-            text-decoration: none;
-            font-size: 0.85rem;
-            transition: opacity 0.3s ease;
-        }
-
-        .footer-legal a:hover {
+            margin-top: 20px;
+            font-size: 0.9rem;
             opacity: 0.8;
         }
 
@@ -205,12 +185,19 @@
             }
 
             .content {
-                padding: 0 20px 30px;
-                margin-top: 80px;
+                padding: 20px;
             }
 
             h1 {
                 font-size: 1.8rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            p {
+                font-size: 0.95rem;
             }
 
             .top-video-wrap {
@@ -253,25 +240,25 @@
         <section class="who-we-work-with">
             <h1>Who We Work With</h1>
 
-            <p>Our clients and partners form a carefully curated network across the real estate, infrastructure, investment, and sustainability ecosystems. We specialize in connecting capital, expertise, and transformative projects at the intersection of regenerative economics and institutional finance.</p>
+            <p>Our clients and partners form a carefully curated network across the real estate, infrastructure, investment, and sustainability ecosystems. We specialize in connecting capital, expertise, and deal flow to drive regenerative and impact-aligned development worldwide. Our engagement model serves institutional investors, family offices, project developers, and ecosystem partners seeking to integrate regenerative principles into large-scale real estate and infrastructure initiatives.</p>
             <br></br>
             <h2>Institutional &amp; Private Capital Partners</h2>
             <br></br>
-            <p>We primarily engage with real estate funds focused on regenerative and impact-oriented investments, private wealth platforms, and family offices seeking differentiated, long-term opportunities. These partners are actively deploying capital into sustainable hospitality, regenerative agriculture real estate, mass timber construction, and climate-aligned infrastructure projects. We serve as both deal source and strategic advisor, helping capital partners navigate market entry and build conviction in emerging asset classes.</p>
+            <p>We primarily engage with real estate funds focused on regenerative and impact-oriented investments, private wealth platforms, and family offices seeking differentiated, long-term opportunities. Our capital network ranges from institutional allocators managing $100M+ to family offices deploying $5M-$50M+ per transaction. We connect these capital sources with vetted deal flow in regenerative real estate, sustainable hospitality, mass timber, and climate-tech infrastructure projects globally.</p>
             <br></br>
             <h2>Transaction &amp; Deal Facilitation</h2>
             <br></br>
-            <p>A core part of our role is matching buyers and sellers of regenerative real estate and related assets. We facilitate introductions and structured dialogues between executives, C-suite leaders, and investment committees to accelerate deal flow and create mutually beneficial partnerships. Whether you're seeking acquisition targets, joint venture partners, or strategic buyers, we bridge information asymmetries and facilitate value-creating relationships.</p>
+            <p>A core part of our role is matching buyers and sellers of regenerative real estate and related assets. We facilitate introductions and structured dialogues between executives, C-suite decision-makers, and investment committees to ensure alignment on thesis, impact metrics, and financial expectations. Our deal sourcing, market analysis, and advisory support help capital allocators identify, evaluate, and execute transactions in line with their regenerative and impact mandates.</p>
             <br></br>
             <h2>Project Sponsors &amp; Operators</h2>
             <br></br>
-            <p>We support infrastructure and real estate projects that integrate sustainable and regenerative approaches. Our portfolio activity spans both emerging markets and mature economies, with a concentration in community-focused development, regenerative hospitality experiences, and climate-resilient infrastructure. We partner with project sponsors across all stages—from concept and feasibility through capital raises, construction, and operational optimization.</p>
+            <p>We support infrastructure and real estate projects that integrate sustainable and regenerative approaches. Our portfolio activity spans both emerging markets and mature economies, ranging from early-stage concept validation to capital-ready projects seeking institutional funding. We work closely with developers, operators, and project sponsors to refine business models, structure deals, and navigate capital markets to achieve their financing objectives.</p>
             <br></br>
             <h2>Broader Ecosystem Partners</h2>
             <br></br>
-            <p>Beyond direct capital and project relationships, we engage with a wider network that includes networking platforms, brand partners, and specialists in climate finance and AI-enabled commercial advisory. These partnerships extend our reach and enable us to provide more comprehensive support to our core stakeholders.</p>
+            <p>Beyond direct capital and project relationships, we engage with a wider network that includes networking platforms, brand partners, and specialists in climate finance and AI-enabled market intelligence. These partnerships extend our reach across geographies and sectors, enabling deeper market insights and broader access to curated deal flow and institutional capital.</p>
 
-            <p>Whether you are deploying capital into regenerative real estate, seeking strategic advisory on business planning and market entry, or requiring structured fundraising support, we bring deep expertise, market knowledge, and trusted relationships to accelerate your objectives.</p>
+            <p>Whether you are deploying capital into regenerative real estate, seeking strategic advisory on business planning and market entry, or requiring structured fundraising support, we bring a collaborative, evidence-based approach grounded in deep market knowledge and authentic commitment to impact-driven outcomes.</p>
             <br></br>
             <h2>Interested in consulting services or fundraising advisory?</h2>
             <br></br>
@@ -287,18 +274,16 @@
             </div>
 
             <br></br>
-            <p>We look forward to learning more about your priorities and discussing potential collaboration.</p>
         </section>
     </div>
 
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 Terra Firma Global. All rights reserved. | Terra Firma Global Advisory Ltd</p>
         <div class="footer-legal">
-            <a href="terms.html">Terms of Service</a>
-            <a href="privacy.html">Privacy Policy</a>
+            <a href="terms.html">Terms of Service</a> |
+            <a href="privacy.html">Privacy Policy</a> |
             <a href="disclaimers.html">Disclaimers</a>
-            <a href="market-insights.html">Market Insights</a>
-            <a href="who-we-work-with.html">Who We Work With</a>
         </div>
     </footer>
 </body>
